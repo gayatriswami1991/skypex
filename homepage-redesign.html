@@ -1,186 +1,182 @@
 <title>Skypex Home Redesign</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Skypex Supplies Ltd is a Nairobi wholesale supplier of baking ingredients since 2009: cake mixes, Pristine whipping cream, chocolate, fillings, glazes, yeast and packaging. Get a bulk quote on WhatsApp.">
+<link rel="canonical" href="https://www.skypex.co.ke/">
+<meta property="og:title" content="Wholesale Baking Supplies in Nairobi | Skypex Supplies Ltd">
+<meta property="og:description" content="Cake mixes, whipping cream, chocolate, fruit fillings, glazes, yeast and packaging for bakeries, cafés and hotels in Nairobi and across Kenya.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.skypex.co.ke/assets/img/banner-range.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["LocalBusiness","Store"],"@id":"https://www.skypex.co.ke/#business","name":"Skypex Supplies Ltd","alternateName":"Skypex Supplies Limited","description":"Wholesale supplier of baking ingredients and bakery packaging in Nairobi, Kenya since 2009: cake mixes, whipping cream, chocolate and cocoa, fruit fillings, mirror glazes, yeast and packaging.","url":"https://www.skypex.co.ke/","telephone":"+254735610504","email":"sales@skypex.co.ke","foundingDate":"2009","slogan":"Bakery success starts with us","image":"https://www.skypex.co.ke/wp-content/uploads/2024/03/high-angle-view-cookies-table_1048944-27497694.jpg","logo":"https://www.skypex.co.ke/wp-content/uploads/2024/03/SKYPEX-LOGO-01-2-1.png","address":{"@type":"PostalAddress","streetAddress":"G16, Spectrum Business Park, Baba Dogo Road","addressLocality":"Nairobi","postalCode":"00100","addressCountry":"KE"},"areaServed":[{"@type":"City","name":"Nairobi"},{"@type":"Country","name":"Kenya"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"13:00"}],"hasMap":"https://maps.google.com/?cid=2813447915882766585","sameAs":["https://www.instagram.com/skypexsuppliesltd/","https://www.facebook.com/SkypexSuppliesLtd/","https://www.tiktok.com/@skypexsuppliesltd","https://www.youtube.com/@SkypexSuppliesLtd"],"knowsAbout":["wholesale baking supplies","cake mixes","whipping cream","cocoa powder","fruit fillings","mirror glaze","instant yeast","bakery packaging"]},
+{"@type":"WebSite","@id":"https://www.skypex.co.ke/#website","url":"https://www.skypex.co.ke/","name":"Skypex Supplies Ltd","publisher":{"@id":"https://www.skypex.co.ke/#business"},"inLanguage":"en-KE"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does Skypex sell wholesale or retail baking supplies in Nairobi?","acceptedAnswer":{"@type":"Answer","text":"Skypex Supplies supplies wholesale bulk baking ingredients and packaging. Retail packs of our brands are available at supermarkets."}},
+{"@type":"Question","name":"Where can a home baker in Kenya buy Skypex brands?","acceptedAnswer":{"@type":"Answer","text":"Home bakers can find retail packs at their favourite supermarket. If a pack is hard to find, message Skypex on WhatsApp and the team will help."}},
+{"@type":"Question","name":"Where is the Skypex shop and what are the opening hours?","acceptedAnswer":{"@type":"Answer","text":"Skypex Supplies is at G16, Spectrum Business Park, Baba Dogo Road, Nairobi. Opening hours are Monday to Friday 8:00 to 5:00 and Saturday 8:00 to 1:00. The shop is closed on Sundays and public holidays."}},
+{"@type":"Question","name":"How do I get wholesale baking supply prices from Skypex?","acceptedAnswer":{"@type":"Answer","text":"Send a WhatsApp message to +254 722 386 394 or use the order builder on the Skypex website. Prices depend on stock and quantity, so the team confirms them with each order."}},
+{"@type":"Question","name":"Which products does Skypex supply to bakeries?","acceptedAnswer":{"@type":"Answer","text":"Skypex supplies cake mixes, sugar paste, whipping and cooking cream, fruit fillings, mirror glaze, sprinkles, cocoa and chocolate, sauces and spreads, bread mixes, instant yeast and baking packaging."}}
+]}]}
+</script>
 <style>
-/* Layout: Skypex's own look (logo sky blue, navy, orange button, Lato + Roboto from the live site).
-   Hero carousel, scalloped cloud dividers like the logo, brand ribbon, product reels, wholesale order tools. */
+/* Layout: clean white and pale-blue bands. Two banner slides, who-we-supply, range grid, chocolate, videos, order, about, guides, Google and Instagram, FAQ, footer. */
 :root{
-  --sky:#1499D4; --sky-deep:#0C6FA3; --navy:#1E293B; --teal:#00789B; --orange:#F39C2B; --orange-ink:#2B1A00;
-  --bg:#FFFFFF; --tint:#EAF6FC; --surface:#FFFFFF; --ink:#1E293B; --muted:#546273; --line:#D6E6EF;
-  --wa:#1FA855; --wa-ink:#FFFFFF; --on-sky:#FFFFFF;
+  --sky:#1499D4; --sky-deep:#0C6FA3; --navy:#1E293B; --orange:#F39C2B; --orange-ink:#2B1A00;
+  --bg:#FFFFFF; --tint:#F1F8FC; --surface:#FFFFFF; --ink:#1E293B; --muted:#53626F; --line:#DCE8EF;
+  --wa:#1FA855; --wa-ink:#FFFFFF; --cocoa:#2B170F;
   --display:"Lato","Segoe UI",system-ui,sans-serif; --body:"Roboto","Segoe UI",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0E1A25; --tint:#13273A; --surface:#162534; --ink:#EAF2F8; --muted:#9FB3C4; --line:#24394B; --navy:#0A1520; color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0E1A25; --tint:#13273A; --surface:#162534; --ink:#EAF2F8; --muted:#9FB3C4; --line:#24394B; --navy:#0A1520; color-scheme:dark}
+  --bg:#0E1A25; --tint:#132636; --surface:#162534; --ink:#EAF2F8; --muted:#9FB3C4; --line:#24394B; --navy:#0A1520; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A25; --tint:#132636; --surface:#162534; --ink:#EAF2F8; --muted:#9FB3C4; --line:#24394B; --navy:#0A1520; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--body);overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sky);z-index:90}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:90}
 a{color:inherit}
-h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
 p{margin:0}
-.wrap{max-width:1200px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-section{padding-block:76px;position:relative}
-.kicker{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
-.kicker::before{content:"";width:28px;height:10px;background:radial-gradient(circle at 5px 5px,var(--orange) 4px,transparent 5px) 0 0/12px 10px repeat-x}
-.h2{font-size:clamp(30px,4.2vw,48px);font-weight:900;color:var(--ink)}
-.lead{color:var(--muted);font-size:18px;max-width:62ch}
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font:700 15px/1 var(--display);letter-spacing:.02em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(12,111,163,.55)}
-.btn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s}
-.btn:hover::after{left:130%}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:80px}
+.band{background:var(--tint)}
+.skip{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:10px 14px;z-index:100}.skip:focus{left:8px;top:8px}
+.kicker{font:900 13px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+.h2{font-size:clamp(28px,3.8vw,44px);font-weight:900;margin-block:12px 12px}
+.lead{color:var(--muted);font-size:18px;max-width:64ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:999px;font:700 15px/1 var(--display);letter-spacing:.02em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -12px rgba(12,111,163,.6)}
 .btn:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
 .btn-wa{background:var(--wa);color:var(--wa-ink)}
 .btn-orange{background:var(--orange);color:var(--orange-ink)}
-.btn-sky{background:var(--sky);color:var(--on-sky)}
+.btn-sky{background:var(--sky);color:#fff}
 .btn-line{border-color:currentColor;background:transparent}
-
-/* scroll reveal: visible by default, softly animates where supported */
+.btn-sm{padding:11px 18px;font-size:14px}
 @supports (animation-timeline:view()){
-  .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
-  @keyframes rv{from{opacity:.55;transform:translateY(30px)}to{opacity:1;transform:none}}
+  .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+  @keyframes rv{from{opacity:.55;transform:translateY(24px)}to{opacity:1;transform:none}}
 }
 
 /* top strip + header */
 .strip{background:var(--navy);color:#fff;font:500 13px/1.4 var(--body);padding:9px 0}
 .strip .wrap{display:flex;gap:6px 24px;flex-wrap:wrap;justify-content:space-between}
 .strip b{color:var(--orange)}
-header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:80;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:80;background:var(--surface);border-bottom:1px solid var(--line)}
 header.nav .wrap{display:flex;align-items:center;gap:22px;min-height:72px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo svg{flex:none}
 .logo b{display:block;font:900 22px/1 var(--display);color:var(--sky);letter-spacing:-.02em}
 .logo small{display:block;font:400 10.5px/1.2 var(--body);color:var(--muted);margin-top:3px}
-nav.links{display:flex;gap:6px;margin-left:auto}
-nav.links a{font:700 14px var(--display);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:10px 12px;border-radius:8px;color:var(--ink)}
+nav.links{display:flex;gap:4px;margin-left:auto}
+nav.links a{font:700 14px var(--display);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:10px 12px;border-radius:8px}
 nav.links a:hover{color:var(--sky);background:var(--tint)}
-header.nav .btn{padding:12px 20px}
 
-/* hero carousel */
-.hero{position:relative;padding:0;overflow:hidden;isolation:isolate}
-.slides{position:relative;min-height:600px}
-.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .9s,visibility .9s;color:#fff;display:flex;align-items:center}
+/* hero carousel (your banner images) */
+.hero{position:relative;overflow:hidden;background:#DCEBF6}
+.slides{position:relative}
+.slide{padding:0;position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s;display:block;color:var(--navy)}
 .slide.on{opacity:1;visibility:visible;position:relative}
-.slide .bgp{position:absolute;inset:0;z-index:-1;transform:scale(1.08);transition:transform 8s linear}
-.slide.on .bgp{transform:scale(1)}
-.s-sky .bgp{background:
-  radial-gradient(circle at 12% 18%,rgba(255,255,255,.22) 0 2px,transparent 3px) 0 0/34px 34px,
-  radial-gradient(120% 90% at 85% 10%,#35B5EA 0,transparent 55%),
-  linear-gradient(135deg,#0C6FA3,#1499D4)}
-.s-orange .bgp{background:
-  repeating-linear-gradient(135deg,rgba(255,255,255,.12) 0 14px,transparent 14px 28px),
-  radial-gradient(100% 80% at 80% 0,#FFC46B,transparent 60%),
-  linear-gradient(135deg,#D8751A,#F39C2B)}
-.s-navy .bgp{background:
-  radial-gradient(circle at 70% 30%,rgba(20,153,212,.5),transparent 45%),
-  repeating-radial-gradient(circle at 90% 100%,rgba(255,255,255,.07) 0 2px,transparent 2px 26px),
-  linear-gradient(135deg,#0A1520,#1E293B)}
-.slide .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%;padding-block:64px 96px}
-.slide h1,.slide h2.t{font-size:clamp(38px,5.6vw,72px);font-weight:900;margin-block:16px 16px;text-shadow:0 2px 0 rgba(0,0,0,.08)}
-.slide p.sub{font-size:19px;opacity:.95;max-width:52ch;margin-bottom:26px}
-.slide .tag{display:inline-block;font:900 13px var(--display);letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);padding:8px 14px;border-radius:999px}
+.slide .banner{display:block;width:100%;height:auto}
+.slide .wrap{position:absolute;inset:0;z-index:1;display:flex;align-items:center;max-width:1440px;padding-bottom:36px;padding-left:max(40px,4vw)}
+.slide .copy{max-width:min(500px,41%)}
+.tag{display:inline-block;font:900 12.5px var(--display);letter-spacing:.14em;text-transform:uppercase;background:#fff;color:var(--sky-deep);padding:8px 14px;border-radius:999px;box-shadow:0 6px 16px -10px rgba(0,0,0,.4)}
+.slide h1,.slide h2.t{font-size:clamp(26px,3.3vw,46px);font-weight:900;margin-block:14px 12px;color:var(--navy)}
+.slide p.sub{font-size:clamp(14px,1.25vw,17px);color:#2B3A4D;margin-bottom:20px}
 .slide .row{display:flex;gap:12px;flex-wrap:wrap}
-.slide .btn-line{color:#fff}
-.slide .on-orange{color:var(--orange-ink)}
-.s-orange{color:var(--orange-ink)}
-.s-orange .tag{background:rgba(255,255,255,.4);border-color:rgba(43,26,0,.25)}
-.s-orange .btn-line{color:var(--orange-ink)}
-.photo{position:relative;justify-self:center;width:min(100%,520px)}
-.photo .card{background:#fff;padding:12px 12px 40px;border-radius:14px;box-shadow:0 34px 60px -24px rgba(0,0,0,.6);transform:rotate(3deg);animation:bob 6s ease-in-out infinite}
-.photo .card img{display:block;width:100%;height:auto;border-radius:8px}
-.photo .card span{position:absolute;left:0;right:0;bottom:11px;text-align:center;font:900 15px var(--display);color:var(--navy);letter-spacing:.04em}
-.photo .badge{position:absolute;right:-14px;top:-18px;width:112px;height:112px;border-radius:50%;background:var(--orange);color:var(--orange-ink);display:grid;place-items:center;text-align:center;font:900 14px/1.15 var(--display);transform:rotate(12deg);box-shadow:0 14px 26px -10px rgba(0,0,0,.5);animation:spin 18s linear infinite}
-.s-orange .photo .badge{background:var(--navy);color:#fff}
-.photo .badge i{display:block;font-style:normal;transform:rotate(-12deg)}
-@keyframes bob{50%{transform:rotate(1deg) translateY(-12px)}}
-@keyframes spin{to{filter:hue-rotate(0)}}
-.slide:not(.on) .anim{opacity:0;transform:translateY(24px)}
-.slide.on .anim{opacity:1;transform:none;transition:opacity .7s .25s,transform .7s .25s}
-.slide.on .anim.d2{transition-delay:.4s}.slide.on .anim.d3{transition-delay:.55s}
-.ctl{position:absolute;left:0;right:0;bottom:66px;z-index:5;display:flex;justify-content:center;align-items:center;gap:12px}
+.slide .btn-line{color:var(--navy)}
+.slide .anim{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.slide.on .anim{opacity:1;transform:none;transition-delay:.2s}
+.slide.on .anim.d2{transition-delay:.35s}.slide.on .anim.d3{transition-delay:.5s}
+.ctl{position:absolute;left:0;right:0;bottom:24px;z-index:5;display:flex;justify-content:center;align-items:center;gap:12px}
 .dots{display:flex;gap:10px}
-.dot{position:relative;width:46px;height:6px;border-radius:6px;background:rgba(255,255,255,.4);border:0;padding:0;cursor:pointer;overflow:hidden}
-.dot i{position:absolute;inset:0;width:0;background:#fff}
+.dot{position:relative;width:46px;height:6px;border-radius:6px;background:rgba(30,41,59,.25);border:0;padding:0;cursor:pointer;overflow:hidden}
+.dot i{position:absolute;inset:0;width:0;background:var(--navy)}
 .dot.on i{animation:fill 6.5s linear forwards}
 .paused .dot.on i{animation-play-state:paused}
 @keyframes fill{to{width:100%}}
-.arrow{width:46px;height:46px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.12);color:#fff;font:900 18px var(--display);cursor:pointer;backdrop-filter:blur(4px)}
-.arrow:hover{background:#fff;color:var(--navy)}
-.scallop{position:absolute;left:0;right:0;bottom:-1px;height:34px;background:radial-gradient(circle at 24px 34px,var(--bg) 24px,transparent 25px) 0 0/48px 34px repeat-x;z-index:4}
-.confetti{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.confetti i{position:absolute;top:-30px;width:8px;height:22px;border-radius:6px;opacity:.85;animation:fall linear infinite}
-@keyframes fall{to{transform:translateY(720px) rotate(360deg)}}
+.arrow{width:44px;height:44px;border-radius:50%;border:2px solid var(--navy);background:rgba(255,255,255,.8);color:var(--navy);font:900 18px var(--display);cursor:pointer}
+.arrow:hover{background:var(--navy);color:#fff}
 
-/* ribbon */
-.ribbon{background:var(--navy);color:#fff;overflow:hidden;padding:18px 0;position:relative}
-.track{display:flex;gap:44px;width:max-content;animation:slide 36s linear infinite}
+/* brand ribbon */
+.ribbon{background:var(--navy);color:#fff;overflow:hidden;padding:16px 0}
+.track{display:flex;gap:40px;width:max-content;animation:slide 40s linear infinite}
 .ribbon:hover .track{animation-play-state:paused}
-.track span{font:900 22px var(--display);letter-spacing:.04em;text-transform:uppercase;display:flex;align-items:center;gap:44px;white-space:nowrap}
-.track span::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--orange);box-shadow:20px 0 0 -3px var(--sky)}
+.track span{font:900 18px var(--display);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:40px;white-space:nowrap}
+.track span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
 @keyframes slide{to{transform:translateX(-50%)}}
 
-/* who */
-.dots-bg{background:radial-gradient(circle,var(--line) 1.5px,transparent 2px) 0 0/22px 22px}
-.paths{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
-.path{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0;position:relative;transition:transform .25s,box-shadow .25s}
-.path:hover{transform:translateY(-6px);box-shadow:0 24px 40px -22px rgba(12,111,163,.5)}
-.path .ic{width:54px;height:54px;border-radius:16px;background:var(--tint);display:grid;place-items:center;color:var(--sky)}
-.path.hl{background:var(--sky);color:#fff;border-color:transparent}
-.path.hl .ic{background:rgba(255,255,255,.2);color:#fff}
-.path.hl p,.path.hl li{color:#fff;opacity:.95}
-.path h3{font-size:22px;font-weight:900}
+/* equal-height card grids */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.path{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:transform .25s,box-shadow .25s}
+.path:hover{transform:translateY(-5px);box-shadow:0 22px 36px -24px rgba(12,111,163,.5)}
+.ic{width:52px;height:52px;border-radius:14px;background:var(--tint);display:grid;place-items:center;color:var(--sky)}
+.path h3{font-size:21px;font-weight:900}
 .path p{color:var(--muted);font-size:15px}
 .path ul{margin:0;padding-left:18px;font-size:15px}
 .path li{margin-block:3px}
-.path .btn{margin-top:auto;align-self:flex-start;padding:12px 18px}
-.path.hl .btn{background:#fff;color:var(--sky-deep)}
+.path .btn{margin-top:auto;align-self:flex-start}
 
-/* reels */
-.reels{background:var(--tint);overflow:hidden}
-.reels::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(20,153,212,.06) 22px 44px);pointer-events:none}
-.rgrid{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-top:36px}
-.phone{position:relative;justify-self:center;width:min(100%,340px);border-radius:34px;padding:10px;background:linear-gradient(160deg,#2b3b52,#0a1520);box-shadow:0 40px 70px -28px rgba(10,21,32,.7)}
-.phone::before{content:"";position:absolute;top:18px;left:50%;width:70px;height:6px;border-radius:6px;background:#0a1520;transform:translateX(-50%);z-index:3;opacity:.6}
-.phone .screen{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5;background:#000}
-.phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
-.phone video.on{opacity:1}
-.tabs{display:flex;flex-direction:column;gap:10px}
-.tab{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 18px;cursor:pointer;font:inherit;color:inherit;transition:transform .2s,border-color .2s,background .2s}
-.tab:hover{transform:translateX(6px)}
-.tab img{width:64px;height:48px;object-fit:cover;border-radius:10px;flex:none}
-.tab b{display:block;font:900 18px var(--display)}
-.tab small{color:var(--muted);font-size:13.5px}
-.tab[aria-selected="true"]{background:var(--sky);border-color:var(--sky);color:#fff;transform:translateX(10px)}
-.tab[aria-selected="true"] small{color:#fff;opacity:.9}
-.rdetail{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
-.rdetail h3{font-size:24px;font-weight:900;margin-bottom:8px}
-.rdetail p{color:var(--muted);margin-bottom:16px}
-.pill{display:inline-block;font:700 12px var(--display);letter-spacing:.08em;text-transform:uppercase;background:var(--tint);color:var(--sky-deep);padding:6px 11px;border-radius:999px;margin:0 6px 14px 0}
-.rnote{font-size:13px;color:var(--muted);margin-top:12px}
+/* range */
+.fchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.fchips button{font:700 14px var(--display);border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 18px;cursor:pointer}
+.fchips button:hover{border-color:var(--sky)}
+.fchips button[aria-pressed="true"]{background:var(--sky);border-color:var(--sky);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.pc{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .25s,box-shadow .25s}
+.pc:hover{transform:translateY(-5px);box-shadow:0 22px 36px -24px rgba(12,111,163,.5)}
+.pc[hidden]{display:none}
+.pimg{position:relative;aspect-ratio:1/1;background:var(--tint);display:grid;place-items:center;overflow:hidden}
+.pimg::after{content:attr(data-slot);position:absolute;left:12px;right:12px;bottom:10px;font:500 11.5px/1.3 var(--body);color:var(--muted);text-align:center}
+.pimg img{position:relative;z-index:1;width:88%;height:88%;object-fit:contain;transition:transform .4s}
+.pc:hover .pimg img{transform:scale(1.05)}
+.pimg.cover img{width:100%;height:100%;object-fit:cover}
+.pc.text .pimg{background:linear-gradient(135deg,var(--navy),var(--sky-deep));color:#fff;font:900 24px var(--display);text-align:center;padding:20px}
+.pc.text .pimg::after{content:none}
+.pbody{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pbody .cat{font:900 11.5px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--sky)}
+.pbody h3{font-size:18px;font-weight:900}
+.pbody p{font-size:14.5px;color:var(--muted)}
+.pbody .btn{margin-top:auto;align-self:flex-start}
+.rangefoot{margin-top:22px;color:var(--muted);font-size:14.5px}
 
-/* pristine spotlight */
-.pristine{background:linear-gradient(135deg,#0C6FA3,#1499D4);color:#fff;overflow:hidden}
-.pristine::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.2) 0 2px,transparent 3px) 0 0/30px 30px,radial-gradient(60% 80% at 100% 0,rgba(255,255,255,.22),transparent 60%)}
-.pristine .scal-t{position:absolute;left:0;right:0;top:-1px;height:34px;background:radial-gradient(circle at 24px 0,var(--bg) 24px,transparent 25px) 0 0/48px 34px repeat-x}
-.pg{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
-.pg .kicker{color:#fff}
-.pg h2{font-size:clamp(32px,4.6vw,56px);font-weight:900;margin-block:14px 16px}
-.pg p.big{font-size:18px;opacity:.95;max-width:56ch}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:26px 0;padding:0;list-style:none}
-.facts li{border:1px solid rgba(255,255,255,.4);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.1);font-size:15px}
-.facts b{display:block;font:900 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:#FFD79A;margin-bottom:4px}
-.pg .photo .card{transform:rotate(-3deg)}
-.pg .btn-line{color:#fff}
-.pg .note{font-size:12.5px;opacity:.85;margin-top:14px}
+/* chocolate (solid, no pattern) */
+.choc{background:var(--cocoa);color:#F6EDE6}
+.choc .kicker{color:#F4B46A}.choc .h2{color:#fff}.choc .lead{color:#D9C3B3}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;margin-top:34px}
+.vidcol{display:flex;align-items:center;justify-content:center;border-radius:22px;padding:28px}
+.choc .vidcol{background:rgba(255,255,255,.06)}
+.phone{position:relative;width:min(100%,320px);border-radius:30px;padding:9px;background:#0A1520;box-shadow:0 30px 50px -26px rgba(0,0,0,.6)}
+.phone .screen{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#222;display:grid;place-items:center;text-align:center;padding:20px;font:700 14px/1.4 var(--display);color:#cbd5df}
+.phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0;transition:opacity .4s}
+.phone video.on,.phone video.ok{opacity:1}
+.choc .screen{background:linear-gradient(160deg,#6B3E27,#2B170F);color:#E9D2C0}
+.clist{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:14px}
+.cc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.cc b{font:900 17px var(--display);color:#fff}
+.cc span{font-size:14.5px;color:#D9C3B3}
+.cc a{margin-top:auto;padding-top:8px;font:700 14px var(--display);color:#F4B46A;text-decoration:none}
+.cc a:hover{text-decoration:underline}
+.cguides{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.cguides a{border:1.5px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font:700 14px var(--display);padding:9px 15px;border-radius:999px}
+.cguides a:hover{background:#fff;color:var(--cocoa)}
 
-/* order tools */
-.tools{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;align-items:start}
-.build{background:var(--surface);border:2px solid var(--sky);border-radius:22px;padding:26px;box-shadow:12px 12px 0 var(--tint)}
-.build h3{font-size:26px;font-weight:900}
+/* videos */
+.reelwrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch;margin-top:34px}
+.reelwrap .vidcol{background:var(--tint);border:1px solid var(--line)}
+.tabs{display:flex;flex-direction:column;gap:10px;height:100%}
+.tab{display:flex;flex-direction:column;gap:6px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 20px;cursor:pointer;font:inherit;color:inherit;flex:1;justify-content:center}
+.tab b{font:900 18px var(--display)}
+.tab small{color:var(--muted);font-size:14.5px}
+.tab .more{display:none;margin-top:6px}
+.tab[aria-selected="true"]{border-color:var(--sky);box-shadow:inset 4px 0 0 var(--sky);background:var(--tint)}
+.tab[aria-selected="true"] .more{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.tab:hover{border-color:var(--sky)}
+
+/* order */
+.build{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px}
+.build h3{font-size:24px;font-weight:900}
 .build .sub{color:var(--muted);font-size:14.5px;margin:6px 0 4px}
 .build label,.build legend{display:block;font:900 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--sky-deep);margin:16px 0 8px;padding:0}
 .build fieldset{border:0;padding:0;margin:0;min-width:0}
@@ -188,285 +184,147 @@ header.nav .btn{padding:12px 20px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{margin:0;text-transform:none;letter-spacing:0;font:500 14px/1 var(--body);color:var(--ink)}
 .chips input{position:absolute;opacity:0;pointer-events:none}
-.chips span{display:inline-block;padding:11px 15px;border:1px solid var(--line);border-radius:999px;cursor:pointer;background:var(--bg);transition:background .15s,transform .15s}
-.chips span:hover{transform:translateY(-2px)}
+.chips span{display:inline-block;padding:10px 14px;border:1px solid var(--line);border-radius:999px;cursor:pointer;background:var(--bg)}
 .chips input:checked+span{background:var(--sky);border-color:var(--sky);color:#fff}
 .chips input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
-.build .btn{width:100%;justify-content:center;margin-top:22px;padding:17px}
-.build .fine{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}
-.sheets{display:grid;gap:14px}
-.slip{background:#FFFCF2;color:#2A1D14;border-radius:8px;padding:20px 22px;display:grid;gap:6px;position:relative;border-left:6px solid var(--orange);box-shadow:0 14px 26px -18px rgba(0,0,0,.5);background-image:repeating-linear-gradient(transparent 0 29px,#EFE4CC 29px 30px);transition:transform .25s}
-.slip:hover{transform:rotate(-1deg) translateX(4px)}
-.slip .for{font:900 11.5px var(--display);letter-spacing:.12em;text-transform:uppercase;color:#8A6A3A;background:#FFFCF2;justify-self:start;padding-right:6px}
-.slip h3{font:900 21px var(--display);background:#FFFCF2;justify-self:start;padding-right:6px}
-.slip p{font:400 14px/30px var(--body);color:#4A3A2C}
-.slip .btn{justify-self:start;margin-top:8px;padding:11px 18px;font-size:14px}
-.tnote{font-size:13px;color:var(--muted);margin-top:4px}
+.build .btn{width:100%;margin-top:22px;padding:16px}
+.build .fine{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+.steps{display:grid;grid-template-rows:repeat(3,1fr);gap:14px;height:100%}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.step i{flex:none;width:44px;height:44px;border-radius:50%;background:var(--sky);color:#fff;display:grid;place-items:center;font:900 18px var(--display);font-style:normal}
+.step h3{font-size:19px;font-weight:900;margin-bottom:4px}
+.step p{color:var(--muted);font-size:15px}
 
-/* numbers */
-.nums{background:var(--navy);color:#fff;overflow:hidden}
-.nums::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 0,rgba(20,153,212,.5),transparent 50%),repeating-radial-gradient(circle at 0 100%,rgba(255,255,255,.06) 0 2px,transparent 2px 24px)}
-.ngrid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.num{border-top:3px solid var(--orange);padding-top:16px}
-.num b{display:block;font:900 clamp(40px,5vw,64px)/1 var(--display);color:#fff}
-.num span{opacity:.85;font-size:15px}
-
-/* why */
-.why{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+/* about */
 .why dl{margin:22px 0 0;display:grid;gap:18px}
-.why dt{font:900 19px var(--display);color:var(--sky-deep)}
+.why dt{font:900 18px var(--display);color:var(--sky-deep)}
 .why dd{margin:4px 0 0;color:var(--muted)}
-.desk{margin-top:22px;border:2px dashed var(--sky);border-radius:16px;padding:16px 20px;background:var(--tint);font-size:15px}
-.desk b{font:900 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--sky-deep)}
-.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.mosaic figure{margin:0;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:1/1;background:var(--tint)}
-.mosaic figure:nth-child(2){transform:translateY(26px)}
-.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.mosaic figure:hover img{transform:scale(1.08)}
-.mosaic figcaption{position:absolute;left:10px;bottom:10px;background:#fff;color:var(--navy);font:900 12px var(--display);padding:6px 10px;border-radius:999px}
+.desk{margin-top:22px;border:2px dashed var(--sky);border-radius:14px;padding:14px 18px;background:var(--tint);font-size:15px}
+.stats{display:grid;grid-template-rows:repeat(3,1fr);gap:14px;height:100%}
+.stat{background:var(--navy);color:#fff;border-radius:18px;padding:22px 26px;display:flex;flex-direction:column;justify-content:center}
+.stat b{font:900 clamp(40px,5vw,60px)/1 var(--display);color:#fff}
+.stat span{opacity:.85;font-size:15px;margin-top:6px}
 
 /* guides */
-.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.post{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;position:relative;overflow:hidden;transition:transform .25s}
-.post::after{content:"";position:absolute;right:-26px;top:-26px;width:90px;height:90px;border-radius:50%;background:var(--tint);transition:transform .4s}
-.post:hover{transform:translateY(-5px)}.post:hover::after{transform:scale(2.4)}
-.post .tag{position:relative;z-index:1;font:900 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--sky)}
-.post h3{position:relative;z-index:1;font-size:20px;font-weight:900}
-.post span.go{position:relative;z-index:1;margin-top:auto;font:700 14px var(--display);color:var(--teal)}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.post{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;transition:transform .25s}
+.post:hover{transform:translateY(-4px)}
+.post .tg{font:900 12px var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--sky)}
+.post h3{font-size:19px;font-weight:900}
+.post .go{margin-top:auto;font:700 14px var(--display);color:var(--sky-deep)}
 
-.reviews{background:var(--tint)}
-.revslot{margin-top:28px;border:2px dashed var(--sky);border-radius:18px;padding:28px;background:var(--surface);color:var(--muted)}
+/* google + instagram */
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:14px}
+.card h2{font-size:clamp(24px,3vw,32px);font-weight:900}
+.card p{color:var(--muted)}
+.card .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.stars{color:var(--orange);letter-spacing:3px;font-size:20px}
+.btn-g{background:#fff;color:#1E293B;border-color:var(--line)}
+.revslot{border:2px dashed var(--sky);border-radius:14px;padding:16px 18px;color:var(--muted);font-size:14.5px;background:var(--tint)}
+.igs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ig{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;text-decoration:none;color:#fff;background:linear-gradient(160deg,var(--sky),var(--navy))}
+.ig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,21,32,.85))}
+.ig>*{position:relative;z-index:1}
+.ig b{font:900 14px/1.25 var(--display)}
+.ig .play{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--navy);display:grid;place-items:center;font-size:11px;padding-left:2px}
 
-.faq{max-width:840px;margin-top:30px}
+/* faq */
+.faq{max-width:860px;margin-top:28px}
 details{border:1px solid var(--line);border-radius:14px;padding:2px 20px;margin-bottom:10px;background:var(--surface)}
 summary{cursor:pointer;font:900 18px var(--display);padding-block:16px;list-style:none;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font:900 26px/1 var(--display);color:var(--sky);transition:transform .25s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{color:var(--muted);padding-bottom:16px;max-width:66ch}
-
-.final{position:relative;overflow:hidden;background:linear-gradient(135deg,#0C6FA3,#1499D4);color:#fff;border-radius:28px;padding:54px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.final::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.22) 2px,transparent 3px) 0 0/26px 26px}
-.final>*{position:relative}
-.final h2{font-size:clamp(30px,4vw,48px);font-weight:900}
-.final p{opacity:.95;margin-top:12px}
-.final .stack{display:flex;flex-direction:column;gap:12px}
-.final .btn-line{color:#fff}
-.contact{font:500 14.5px/1.8 var(--body)}
-.float{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:85;display:flex;align-items:center;gap:10px;background:var(--wa);color:var(--wa-ink);padding:14px 20px;border-radius:999px;font:900 15px var(--display);text-decoration:none;box-shadow:0 12px 28px -8px rgba(0,0,0,.5)}
-.float::before{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--wa);animation:ping 2.2s infinite}
-@keyframes ping{to{transform:scale(1.35);opacity:0}}
-
-
-/* banner slides (your own banner images) */
-.s-banner{color:var(--navy)}
-.s-banner .bgp{background:var(--img) right center/cover no-repeat,linear-gradient(135deg,#EAF6FC,#8FCDEB)}
-.s-banner .wrap{grid-template-columns:minmax(0,600px)}
-.s-banner .tag{background:rgba(255,255,255,.75);color:var(--navy);border-color:rgba(30,41,59,.2)}
-.s-banner h1,.s-banner h2.t{text-shadow:none;color:var(--navy)}
-.s-banner .btn-line{color:var(--navy)}
-.s-banner p.sub{opacity:1;color:#2B3A4D}
-
-/* range grid */
-.range{background:var(--bg)}
-.fchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.fchips button{font:700 14px var(--display);letter-spacing:.03em;border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:10px 18px;cursor:pointer;transition:transform .15s,background .15s}
-.fchips button:hover{transform:translateY(-2px)}
-.fchips button[aria-pressed="true"]{background:var(--sky);border-color:var(--sky);color:#fff}
-.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px}
-.pc{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .25s,box-shadow .25s}
-.pc:hover{transform:translateY(-6px);box-shadow:0 26px 40px -24px rgba(12,111,163,.55)}
-.pc[hidden]{display:none}
-.pimg{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 40%,#fff,var(--tint));display:grid;place-items:center;overflow:hidden}
-.pimg::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(20,153,212,.12) 1.5px,transparent 2px) 0 0/16px 16px}
-.pimg::after{content:attr(data-slot);position:absolute;left:12px;right:12px;bottom:10px;font:500 11px/1.3 var(--body);color:var(--muted);text-align:center}
-.pimg img{position:relative;z-index:1;width:88%;height:88%;object-fit:contain;transition:transform .45s}
-.pc:hover .pimg img{transform:scale(1.08) rotate(-1.5deg)}
-.pimg.cover img{width:100%;height:100%;object-fit:cover}
-.pbody{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.pbody .cat{font:900 11.5px var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--sky)}
-.pbody h3{font-size:19px;font-weight:900}
-.pbody p{font-size:14.5px;color:var(--muted)}
-.pbody .btn{margin-top:auto;align-self:flex-start;padding:11px 16px;font-size:14px}
-.pc.text .pimg{background:linear-gradient(135deg,var(--navy),var(--sky-deep));color:#fff;font:900 26px var(--display);text-align:center;padding:20px}
-.pc.text .pimg::before{background:radial-gradient(circle,rgba(255,255,255,.25) 1.5px,transparent 2px) 0 0/16px 16px}
-.rangefoot{margin-top:26px;color:var(--muted);font-size:14.5px}
-
-/* google + instagram */
-.gbox{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-.btn-g{background:#fff;color:#1E293B;border-color:#D6E6EF}
-.btn-g svg{flex:none}
-.stars{color:var(--orange);letter-spacing:3px;font-size:22px}
-.insta{background:var(--navy);color:#fff;overflow:hidden}
-.insta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 0,rgba(20,153,212,.45),transparent 45%),repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.04) 22px 44px)}
-.insta .wrap{position:relative}
-.insta .kicker{color:#fff}
-.igrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}
-.ig{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;text-decoration:none;color:#fff;background:linear-gradient(160deg,var(--sky),var(--navy));transition:transform .3s}
-.ig:hover{transform:translateY(-8px) rotate(-1deg)}
-.ig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .5s}
-.ig:hover img{transform:scale(1.07)}
-.ig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(10,21,32,.9))}
-.ig>*{position:relative;z-index:1}
-.ig .play{position:absolute;top:14px;right:14px;z-index:2;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;color:var(--navy);font-size:14px;padding-left:3px}
-.ig b{font:900 16px/1.25 var(--display)}
-.ig small{opacity:.85;font-size:12.5px;margin-top:4px}
-.ig.p1{background:linear-gradient(160deg,#F39C2B,#D8751A)}.ig.p2{background:linear-gradient(160deg,#1499D4,#0C6FA3)}
-.ig.pat{background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.25) 2px,transparent 3px) 0 0/22px 22px,linear-gradient(160deg,#1499D4,#0A1520)}
-.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.social a{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.4);color:#fff;text-decoration:none;font:700 14px var(--display);padding:10px 16px;border-radius:999px;transition:background .2s,color .2s}
-.social a:hover{background:#fff;color:var(--navy)}
+summary::after{content:"+";font:900 24px/1 var(--display);color:var(--sky)}
+details[open] summary::after{content:"\2212"}
+details p{color:var(--muted);padding-bottom:16px;max-width:68ch}
 
 /* footer */
-footer{position:relative;background:#0A1520;color:#B9C8D5;font-size:15px;padding:0 0 96px;margin-top:40px}
-footer::before{content:"";position:absolute;left:0;right:0;top:-33px;height:34px;background:radial-gradient(circle at 24px 34px,#0A1520 24px,transparent 25px) 0 0/48px 34px repeat-x}
-footer::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(20,153,212,.14) 1.5px,transparent 2px) 0 0/24px 24px;pointer-events:none}
-footer .wrap{position:relative;z-index:1}
+footer{background:#0A1520;color:#B9C8D5;font-size:15px;padding-bottom:96px}
 .fcta{display:flex;flex-wrap:wrap;gap:18px 30px;align-items:center;justify-content:space-between;padding-block:44px 38px;border-bottom:1px solid rgba(255,255,255,.12)}
 .fcta h2{font-size:clamp(24px,3.2vw,36px);font-weight:900;color:#fff;max-width:22ch}
 .fcta .row{display:flex;gap:12px;flex-wrap:wrap}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px;padding-block:44px}
-.fbrand .logo b{color:#fff;font-size:24px}
-.fbrand .logo small{color:#8FA5B7}
-.fbrand p{margin-top:16px;max-width:36ch;line-height:1.6}
+.fbrand .logo b{color:#fff;font-size:24px}.fbrand .logo small{color:#8FA5B7}
+.fbrand p{margin-top:16px;max-width:36ch}
 footer h3{font:900 13px var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-footer li a{color:#DCE7F0;text-decoration:none;display:inline-block;transition:color .2s,transform .2s}
-footer li a:hover{color:#fff;transform:translateX(5px)}
-footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:900}
+footer li a{color:#DCE7F0;text-decoration:none}
+footer li a:hover{color:#fff;text-decoration:underline}
 .fcontact li{display:flex;gap:12px;align-items:flex-start;color:#DCE7F0}
 .fcontact svg{flex:none;margin-top:3px;color:var(--sky)}
-.fcontact a{color:#fff;text-decoration:none}
-.fcontact a:hover{text-decoration:underline}
 .fsoc{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
-.fsoc a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(255,255,255,.3);color:#fff;transition:background .2s,transform .2s,border-color .2s}
-.fsoc a:hover{background:var(--sky);border-color:var(--sky);transform:translateY(-4px)}
-.fhours{margin-top:18px;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;font-size:14px;background:rgba(255,255,255,.04)}
+.fsoc a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(255,255,255,.3);color:#fff}
+.fsoc a:hover{background:var(--sky);border-color:var(--sky)}
+.fhours{margin-top:18px;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;font-size:14px}
 .fhours b{display:block;color:#fff;font:900 13px var(--display);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
 .fbar{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding-block:20px;border-top:1px solid rgba(255,255,255,.12);font-size:13.5px;color:#8FA5B7}
-.fbar a{color:#DCE7F0}
-.totop{display:inline-flex;align-items:center;gap:8px;font:700 13px var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:9px 16px}
+.totop{font:700 13px var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:9px 16px}
 .totop:hover{background:#fff;color:#0A1520}
+.float{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:85;display:flex;align-items:center;gap:10px;background:var(--wa);color:var(--wa-ink);padding:13px 18px;border-radius:999px;font:900 15px var(--display);text-decoration:none;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
 
-.fcontact li a::before{content:none}.fcontact li a:hover{transform:none}
-/* chocolate */
-.choc{background:#2B170F;color:#F6EDE6;overflow:hidden;padding-top:104px}
-.choc::before{content:"";position:absolute;left:0;right:0;top:0;height:64px;background:
-  radial-gradient(ellipse 22px 56px at 50px 0,var(--bg) 98%,transparent 100%) 0 0/120px 64px repeat-x,
-  radial-gradient(ellipse 30px 38px at 25px 0,var(--bg) 98%,transparent 100%) 0 0/90px 64px repeat-x,
-  linear-gradient(var(--bg),var(--bg)) 0 0/100% 12px no-repeat}
-.choc::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.05) 2px,transparent 3px) 0 0/28px 28px,radial-gradient(70% 60% at 85% 20%,rgba(196,120,60,.35),transparent 60%);pointer-events:none}
-.choc .wrap{position:relative;z-index:1}
-.choc .kicker{color:#F4B46A}
-.choc h2{color:#fff}
-.choc .lead{color:#D9C3B3}
-.cgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center;margin-top:36px}
-.cvid{position:relative;justify-self:center;width:min(100%,340px);border-radius:30px;padding:10px;background:linear-gradient(160deg,#5A3523,#1B0E08);box-shadow:0 40px 70px -28px #000}
-.cvid .screen{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,#6B3E27,#2B170F);display:grid;place-items:center;text-align:center;padding:24px;color:#E9D2C0;font:700 14px/1.4 var(--display)}
-.cvid .screen span{position:relative;z-index:0;opacity:.85}
-.cvid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0;transition:opacity .5s}
-.cvid video.ok{opacity:1}
-.clist{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.cc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px;transition:transform .25s,background .25s}
-.cc:hover{transform:translateY(-5px);background:rgba(255,255,255,.12)}
-.cc b{font:900 18px var(--display);color:#fff}
-.cc span{font-size:14.5px;color:#D9C3B3}
-.cc a{margin-top:8px;font:700 14px var(--display);color:#F4B46A;text-decoration:none}
-.cc a:hover{text-decoration:underline}
-.cguides{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.cguides a{border:1.5px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font:700 14px var(--display);padding:10px 16px;border-radius:999px}
-.cguides a:hover{background:#fff;color:#2B170F}
-
+@media (max-width:1100px){
+  .slide{position:absolute}.slide.on{position:relative}
+  .slide .wrap{position:static;display:block;padding-block:22px 6px}.slide .copy{max-width:640px}
+  .slide h1,.slide h2.t{font-size:clamp(28px,5vw,40px)}.slide p.sub{font-size:16px}
+  .ctl{position:static;padding-block:6px 22px}.hero{background:var(--bg)}
+}
 @media (max-width:980px){
   nav.links{display:none}header.nav .btn{margin-left:auto}
-  .slide .wrap,.rgrid,.pg,.tools,.why,.final{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr 1fr}.cgrid{grid-template-columns:1fr}.clist{grid-template-columns:1fr 1fr}.paths{grid-template-columns:1fr 1fr}.posts{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:repeat(2,1fr)}.igrid{grid-template-columns:repeat(2,1fr)}.s-banner .bgp{background-position:72% center}.s-banner .bgp::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.55))}.ngrid{grid-template-columns:1fr 1fr}
-  .photo{width:min(100%,380px)}.slides{min-height:0}
-  .slide .wrap{padding-block:44px 104px}
-  section{padding-block:56px}.final{padding:32px 22px}
+  .grid4,.pgrid{grid-template-columns:1fr 1fr}.posts{grid-template-columns:1fr 1fr}
+  .two,.reelwrap,.proof{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr 1fr}
+  .steps,.stats{height:auto;grid-template-rows:none}
+  section{padding-block:56px}
 }
-@media (max-width:600px){.clist{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr;gap:30px}.paths,.posts{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr 1fr}.pbody p{display:none}.facts{grid-template-columns:1fr}.logo small{display:none}.photo .badge{width:88px;height:88px;font-size:12px;right:-6px}}
+@media (max-width:600px){.grid4,.posts,.clist,.fgrid{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr 1fr}.pbody p{display:none}.logo small{display:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.slide .anim{opacity:1!important;transform:none!important}}
 </style>
 
+<a class="skip" href="#main">Skip to content</a>
 <div class="strip"><div class="wrap">
   <span><b>Wholesale bulk supply.</b> Mon to Fri 8:00 to 5:00, Sat 8:00 to 1:00. Closed Sundays and holidays.</span>
   <span>G16, Spectrum Business Park, Baba Dogo Road, Nairobi</span>
 </div></div>
 
 <header class="nav"><div class="wrap">
-  <a class="logo" href="#top" aria-label="Skypex Supplies Ltd home">
+  <a class="logo" href="#top" aria-label="Skypex Supplies Ltd, home">
     <svg width="44" height="40" viewBox="0 0 44 40" aria-hidden="true"><path d="M8 28c-4-1-6-5-4-9 1.5-3 4.5-4 7-3.4C12 11 17 8 22 8c6 0 10 3.5 11 8 4-.5 8 2.4 7.2 6.6-.6 3-3 5-6 5.4V35H12v-7H8Z" fill="#1499D4"/><path d="M13 30h19M16 24h13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
     <span><b>Skypex Supplies</b><small>Bakery success starts with us</small></span>
   </a>
   <nav class="links" aria-label="Main">
-    <a href="#who">Who we supply</a><a href="#range">Range</a><a href="#chocolate">Chocolate</a><a href="#reels">Reels</a><a href="#pristine">Pristine</a><a href="#order">Order tools</a><a href="#learn">Guides</a><a href="#faq">FAQ</a>
+    <a href="#who">Who we supply</a><a href="#range">Range</a><a href="#chocolate">Chocolate</a><a href="#reels">Videos</a><a href="#order">Order</a><a href="#learn">Guides</a><a href="#faq">FAQ</a>
   </nav>
-  <a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">WhatsApp quote</a>
+  <a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">WhatsApp quote</a>
 </div></header>
 
-<main id="top">
+<main id="main"><span id="top"></span>
 
-<!-- HERO CAROUSEL -->
-<div class="hero" id="hero" aria-roledescription="carousel" aria-label="Featured products">
-  <div class="confetti" id="confetti" aria-hidden="true"></div>
+<!-- HERO -->
+<div class="hero" id="hero" role="region" aria-roledescription="carousel" aria-label="Featured baking supplies">
   <div class="slides">
-    <section class="slide s-banner on" aria-roledescription="slide" aria-label="1 of 4: Our range">
-      <div class="bgp" style="--img:url(assets/img/banner-range.jpg)"></div>
-      <div class="wrap"><div>
-        <span class="tag anim">Wholesale baking supplies since 2009</span>
-        <h1 class="anim d2">Every ingredient your bakery runs on.</h1>
-        <p class="sub anim d3">Cake mixes, sugar paste, sauces, fruit fillings, cream, chocolate, yeast and packaging. One counter in Nairobi, supplied in bulk for bakeries, cafés and hotels.</p>
+    <section class="slide on" aria-roledescription="slide" aria-label="1 of 2">
+      <img class="banner" src="assets/img/banner-range.jpg" alt="Skybake Super Veg Vanilla Cake Mix, White Sugar Paste, Frutti strawberry fruit filling and Dr.baker chocolate hazelnut sauce, wholesale baking supplies in Nairobi" width="1800" height="675" fetchpriority="high">
+      <div class="wrap"><div class="copy">
+        <span class="tag anim">Nairobi, since 2009</span>
+        <h1 class="anim d2">Wholesale baking supplies in Nairobi</h1>
+        <p class="sub anim d3">Skypex Supplies Ltd supplies bakeries, cafés and hotels across Kenya with cake mixes, sugar paste, fruit fillings, sauces, cream, cocoa, yeast and packaging, all from one counter.</p>
         <div class="row anim d3">
           <a class="btn btn-orange" href="#range">Browse the range</a>
-          <a class="btn btn-line" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">Get a wholesale quote</a>
+          <a class="btn btn-line" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">Get a bulk quote</a>
         </div>
       </div></div>
     </section>
-
-    <section class="slide s-banner" aria-roledescription="slide" aria-label="2 of 4: Pristine Whipping Cream">
-      <div class="bgp" style="--img:url(assets/img/banner-pristine.jpg)"></div>
-      <div class="wrap"><div>
+    <section class="slide" aria-roledescription="slide" aria-label="2 of 2">
+      <img class="banner" src="assets/img/banner-pristine.jpg" alt="Pristine whipping and cooking cream bag with whipped cream, strawberries and cream cakes" width="1800" height="720" loading="lazy">
+      <div class="wrap"><div class="copy">
         <span class="tag anim">Our hero cream</span>
-        <h2 class="t anim d2">Purely Pristine. Cream bakers reorder.</h2>
-        <p class="sub anim d3">Pristine whipping and cooking cream for Nairobi's bakeries, cafés and hotels. Supplied in bulk by Skypex since 2009.</p>
+        <h2 class="t anim d2">Pristine whipping cream for Kenyan bakers</h2>
+        <p class="sub anim d3">Pristine whipping and cooking cream for decorating cakes, filling pastries and finishing desserts. Supplied in bulk to bakeries and hotels in Nairobi.</p>
         <div class="row anim d3">
           <a class="btn btn-orange" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20want%20a%20wholesale%20quote%20for%20Pristine%20Whipping%20Cream." target="_blank" rel="noopener">Get a Pristine quote</a>
-          <a class="btn btn-line" href="#pristine">See Pristine</a>
+          <a class="btn btn-line" href="#reels">Watch the video</a>
         </div>
       </div></div>
-    </section>
-
-    <section class="slide s-orange" aria-roledescription="slide" aria-label="3 of 4: Skybake and Frutti fruit fillings">
-      <div class="bgp"></div>
-      <div class="wrap">
-        <div>
-          <span class="tag anim">Skybake &amp; Frutti</span>
-          <h2 class="t anim d2">Fill with Flavor. Bake boldly.</h2>
-          <p class="sub anim d3">Frutti fruit fillings in Mango, Blueberry, Strawberry and Raspberry for tarts, cheesecakes and cakes that sell on taste.</p>
-          <div class="row anim d3">
-            <a class="btn btn-sky" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20quote%20Frutti%20fruit%20fillings%20in%20bulk." target="_blank" rel="noopener">Quote fruit fillings</a>
-            <a class="btn btn-line" href="#reels">Watch the reel</a>
-          </div>
-        </div>
-        <div class="photo anim d2"><div class="card"><img src="assets/img/frutti.jpg" alt="Frutti fruit filling tins stacked" width="700" height="510" loading="lazy"><span>FRUTTI x SKYBAKE</span></div><div class="badge"><i>4 fruit<br>flavours</i></div></div>
-      </div>
-    </section>
-
-    <section class="slide s-navy" aria-roledescription="slide" aria-label="4 of 4: Mirror glazes">
-      <div class="bgp"></div>
-      <div class="wrap">
-        <div>
-          <span class="tag anim">Skybake mirror glaze</span>
-          <h2 class="t anim d2">Glaze goals. Caramel, chocolate, clear.</h2>
-          <p class="sub anim d3">Three mirror glazes for a shine your customers photograph before they eat. Supplied in bulk tubs for working bakeries.</p>
-          <div class="row anim d3">
-            <a class="btn btn-orange" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20quote%20Skybake%20mirror%20glazes." target="_blank" rel="noopener">Quote the glazes</a>
-            <a class="btn btn-line" href="#reels">Watch the reel</a>
-          </div>
-        </div>
-        <div class="photo anim d2"><div class="card"><img src="assets/img/glaze.jpg" alt="Skybake caramel, chocolate and clear mirror glaze tubs" width="680" height="265" loading="lazy"><span>SKYBAKE MIRROR GLAZE</span></div><div class="badge"><i>3 glaze<br>finishes</i></div></div>
-      </div>
     </section>
   </div>
   <div class="ctl">
@@ -474,183 +332,155 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
     <div class="dots" id="dots"></div>
     <button class="arrow" id="next" aria-label="Next slide">&#8594;</button>
   </div>
-  <div class="scallop" aria-hidden="true"></div>
 </div>
 
 <div class="ribbon" aria-label="Brands we supply"><div class="track" id="track">
-  <span>Pristine</span><span>Barry Callebaut</span><span>Skybake</span><span>Dawn Foods</span><span>Altinmarka</span><span>Komplet</span><span>Bruggeman Yeast</span><span>Frutti</span><span>Hotpack</span><span>IFFCO</span>
+  <span>Pristine</span><span>Skybake</span><span>Skypower</span><span>Dr.baker</span><span>Frutti</span><span>Barry Callebaut</span><span>Altinmarka</span><span>Dawn Foods</span><span>Komplet</span><span>Bruggeman</span><span>Victoria</span><span>Hotpack</span><span>Nova Cart</span><span>IFFCO</span>
 </div></div>
 
 <!-- WHO -->
-<section id="who" class="dots-bg"><div class="wrap">
+<section id="who"><div class="wrap">
   <span class="kicker">Who we supply</span>
-  <h2 class="h2 rv" style="margin-block:14px 12px">Built for the people who bake for a living.</h2>
-  <p class="lead rv">Skypex supplies in wholesale bulk. Here is what each kind of buyer usually asks us for, and where retail packs fit in.</p>
-  <div class="paths">
-    <article class="path hl rv">
-      <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8Z"/><path d="M6 11V8a6 6 0 0 1 12 0v3"/></svg></div>
-      <h3>Small bakeries &amp; cafés</h3>
-      <p>One supplier for the weekly restock, so you stop chasing five sellers.</p>
-      <ul><li>Cartons of Pristine</li><li>Mixes, glazes, fillings</li><li>Yeast, sprinkles, packaging</li></ul>
-      <a class="btn" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20run%20a%20small%20bakery%20and%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">Get a quote</a>
+  <h2 class="h2">Bakery ingredients for the people who bake for a living</h2>
+  <p class="lead">Skypex sells wholesale bulk. Here is what each kind of buyer usually asks for, and where retail packs fit in.</p>
+  <div class="grid4">
+    <article class="path rv">
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8Z"/><path d="M6 11V8a6 6 0 0 1 12 0v3"/></svg></div>
+      <h3>Small bakeries and cafés</h3>
+      <p>One supplier for the weekly restock of cake mixes, cream and packaging.</p>
+      <ul><li>Cartons of cream</li><li>Mixes, glazes, fillings</li><li>Yeast and boxes</li></ul>
+      <a class="btn btn-sky btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20run%20a%20small%20bakery%20and%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">Get a quote</a>
     </article>
     <article class="path rv">
-      <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg></div>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21v-6h6v6M8 10h.01M12 10h.01M16 10h.01"/></svg></div>
       <h3>Hotels, caterers, institutions</h3>
-      <p>Banquets and breakfast service cannot run out of cream halfway through.</p>
+      <p>Banquets and breakfast service need steady stock month after month.</p>
       <ul><li>Monthly bulk supply</li><li>Couverture chocolate</li><li>Takeaway packaging</li></ul>
-      <a class="btn btn-sky" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20we%20are%20a%20hotel%2Fcaterer%20and%20need%20monthly%20bulk%20supply." target="_blank" rel="noopener">Talk to our team</a>
+      <a class="btn btn-sky btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20we%20are%20a%20hotel%2Fcaterer%20and%20need%20monthly%20bulk%20supply." target="_blank" rel="noopener">Talk to our team</a>
     </article>
     <article class="path rv">
-      <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></svg></div>
-      <h3>Shops &amp; resellers</h3>
-      <p>Stock the brands your customers already ask for. Ask us about wholesale lines.</p>
-      <ul><li>Pristine, Skybake, Frutti</li><li>Bruggeman yeast</li><li>Skypower sprinkles</li></ul>
-      <a class="btn btn-sky" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20own%20a%20shop%20and%20would%20like%20to%20stock%20your%20brands." target="_blank" rel="noopener">Become a stockist</a>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></svg></div>
+      <h3>Shops and resellers</h3>
+      <p>Stock the brands your customers already ask for, at wholesale prices.</p>
+      <ul><li>Pristine, Skybake, Frutti</li><li>Victoria and Bruggeman yeast</li><li>Skypower sprinkles</li></ul>
+      <a class="btn btn-sky btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20own%20a%20shop%20and%20would%20like%20to%20stock%20your%20brands." target="_blank" rel="noopener">Become a stockist</a>
     </article>
     <article class="path rv">
-      <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div>
+      <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div>
       <h3>Home bakers</h3>
-      <p>Retail packs of our brands are sold at supermarkets. Not sure where? Message us and we will point you to a pack.</p>
-      <ul><li>Ask which pack fits</li><li>Learn from our guides</li><li>Join a class</li></ul>
-      <a class="btn btn-sky" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20am%20a%20home%20baker.%20Where%20can%20I%20buy%20retail%20packs%3F" target="_blank" rel="noopener">Ask where to buy</a>
+      <p>Retail packs of our brands are sold at supermarkets. Cannot find one? Message us.</p>
+      <ul><li>Ask which pack fits</li><li>Read our baking guides</li><li>Join a class</li></ul>
+      <a class="btn btn-sky btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20am%20a%20home%20baker.%20Where%20can%20I%20buy%20retail%20packs%3F" target="_blank" rel="noopener">Ask where to buy</a>
     </article>
   </div>
 </div></section>
 
-<!-- REELS -->
-<section class="reels" id="reels"><div class="wrap">
-  <span class="kicker">Product reels</span>
-  <h2 class="h2 rv" style="margin-block:14px 12px">See the range in motion.</h2>
-  <p class="lead rv">Pick a product. Every one is supplied wholesale, and retail packs sit in supermarkets near you.</p>
-  <div class="rgrid">
-    <div class="phone rv"><div class="screen" id="screen">
+<!-- RANGE -->
+<section class="band" id="range"><div class="wrap">
+  <span class="kicker">Our baking supplies range</span>
+  <h2 class="h2">Cake mixes, cream, fillings, glazes, yeast and packaging</h2>
+  <p class="lead">Filter by what you are making. Chocolate, cocoa and sauces have their own section below.</p>
+  <div class="fchips" id="fchips" role="group" aria-label="Filter products">
+    <button aria-pressed="true" data-f="all">All products</button>
+    <button aria-pressed="false" data-f="Cakes and mixes">Cakes and mixes</button>
+    <button aria-pressed="false" data-f="Cream and fillings">Cream and fillings</button>
+    <button aria-pressed="false" data-f="Finishing">Finishing</button>
+    <button aria-pressed="false" data-f="Bread and yeast">Bread and yeast</button>
+    <button aria-pressed="false" data-f="Packaging">Packaging</button>
+  </div>
+  <div class="pgrid" id="pgrid">
+    <article class="pc" data-cat="Cakes and mixes"><div class="pimg " data-slot="Skybake Super Veg Vanilla Cake Mix"><img src="assets/img/cakemix.jpg" alt="Skybake Super Veg Vanilla Cake Mix pack" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes and mixes</span><h3>Skybake Super Veg Vanilla Cake Mix</h3><p>Vanilla cake mix for a consistent crumb, batch after batch.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Super%20Veg%20Vanilla%20Cake%20Mix." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cakes and mixes"><div class="pimg " data-slot="Skybake Vanilla All Purpose Cake Mix"><img src="assets/img/cakemix25.jpg" alt="Skybake Vanilla All Purpose Cake Mix 25 kg sack" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes and mixes</span><h3>Skybake Vanilla All Purpose Cake Mix</h3><p>All purpose vanilla mix in 25 kg sacks for working bakeries.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Vanilla%20All%20Purpose%20Cake%20Mix%2025kg." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cakes and mixes"><div class="pimg " data-slot="Skybake White Sugar Paste"><img src="assets/img/sugarpaste.jpg" alt="Skybake White Sugar Paste 1 kg tub" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes and mixes</span><h3>Skybake White Sugar Paste</h3><p>1 kg tubs of white sugar paste for covering and modelling cakes.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20White%20Sugar%20Paste." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cakes and mixes"><div class="pimg " data-slot="Skybake Desiccated Coconut"><img src="assets/img/coconut.jpg" alt="Skybake desiccated coconut 1 kg pouch" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes and mixes</span><h3>Skybake Desiccated Coconut</h3><p>100 percent unsweetened desiccated coconut, 1 kg, for baking and decorating.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Desiccated%20Coconut%201kg." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cream and fillings"><div class="pimg cover" data-slot="Pristine Whipping Cream"><img src="assets/img/pristine.jpg" alt="Pristine whipping cream packs" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream and fillings</span><h3>Pristine Whipping Cream</h3><p>Purely Pristine: whipping and cooking cream for decorating and desserts.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Pristine%20Whipping%20Cream." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cream and fillings"><div class="pimg " data-slot="Dr.baker Prestige whipping cream"><img src="assets/img/prestige.jpg" alt="Dr.baker Prestige whipping cream 1 L carton" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream and fillings</span><h3>Dr.baker Prestige whipping cream</h3><p>Vegetable fat whipping cream, UHT, 25 percent fat, 1 L.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Prestige%20whipping%20cream." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cream and fillings"><div class="pimg " data-slot="Dr.baker Savor cooking cream"><img src="assets/img/savor.jpg" alt="Dr.baker Savor cooking cream 1 L carton" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream and fillings</span><h3>Dr.baker Savor cooking cream</h3><p>Vegetable fat cooking cream, UHT, 15 percent fat, 1 L.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Savor%20cooking%20cream." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cream and fillings"><div class="pimg " data-slot="Dr.baker Sugar Cream Chantilly"><img src="assets/img/drbaker.jpg" alt="Dr.baker Sugar Cream Chantilly bag" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream and fillings</span><h3>Dr.baker Sugar Cream Chantilly</h3><p>Sugar cream chantilly in a bulk bag from the Dr.baker range.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Sugar%20Cream%20Chantilly." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Cream and fillings"><div class="pimg cover" data-slot="Frutti fruit fillings"><img src="assets/img/frutti.jpg" alt="Frutti fruit filling tins" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream and fillings</span><h3>Frutti fruit fillings</h3><p>Mango, Blueberry, Strawberry and Raspberry fruit fillings for tarts and cakes.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Frutti%20fruit%20fillings." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Finishing"><div class="pimg cover" data-slot="Skybake Mirror Glaze"><img src="assets/img/glaze.jpg" alt="Skybake caramel, chocolate and clear mirror glaze tubs" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Finishing</span><h3>Skybake Mirror Glaze</h3><p>Clear, Caramel and Chocolate mirror glaze tubs for a glossy finish.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20mirror%20glaze." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Finishing"><div class="pimg cover" data-slot="Skypower sprinkles"><img src="assets/img/sprinkles.jpg" alt="Skypower sprinkles and vermicelli pouches" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Finishing</span><h3>Skypower sprinkles</h3><p>Crispy chips and vermicelli pouches for quick, colourful decoration.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skypower%20sprinkles%20and%20vermicelli." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Bread and yeast"><div class="pimg " data-slot="Komplet Crusty Rye 50"><img src="assets/img/komplet.jpg" alt="Komplet Crusty Rye 50 bread mix 10 kg sack" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Bread and yeast</span><h3>Komplet Crusty Rye 50</h3><p>Concentrated rye bread mix in 10 kg sacks from the Komplet range.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Komplet%20Crusty%20Rye%2050." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Bread and yeast"><div class="pimg " data-slot="Victoria instant yeast"><img src="assets/img/victoria.jpg" alt="Victoria instant yeast 500 g pack" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Bread and yeast</span><h3>Victoria instant yeast</h3><p>500 g packs of instant yeast for bread, buns and doughnuts.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Victoria%20instant%20yeast%20500g." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Bread and yeast"><div class="pimg cover" data-slot="Bruggeman instant yeast"><img src="assets/img/yeast.jpg" alt="Bruggeman instant yeast 500 g pack" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Bread and yeast</span><h3>Bruggeman instant yeast</h3><p>500 g Bruggeman instant yeast, a baker's staple supplied in bulk.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Bruggeman%20instant%20yeast." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc" data-cat="Packaging"><div class="pimg " data-slot="Paper loaf baking moulds"><img src="assets/img/moulds.jpg" alt="Paper loaf baking moulds" width="600" height="600" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Packaging</span><h3>Paper loaf baking moulds</h3><p>Disposable paper moulds for loaves and tea cakes. Bake and sell in one tin.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20paper%20loaf%20baking%20moulds." target="_blank" rel="noopener">Get a quote</a></div></article>
+    <article class="pc text" data-cat="Packaging"><div class="pimg"><span>Hotpack · Nova Cart</span></div><div class="pbody"><span class="cat">Packaging</span><h3>Hotpack and Nova Cart</h3><p>Cake boxes, cups, containers and greaseproof papers.</p><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Hotpack%20and%20Nova%20Cart%20packaging." target="_blank" rel="noopener">Get a quote</a></div></article>
+
+  </div>
+  <p class="rangefoot">Packs shown are examples from our shelves. Sizes, availability and prices are confirmed on WhatsApp.</p>
+</div></section>
+
+<!-- CHOCOLATE -->
+<section class="choc" id="chocolate"><div class="wrap">
+  <span class="kicker">Chocolate, cocoa and sauces</span>
+  <h2 class="h2">Cocoa powder, couverture chocolate and dessert sauces in bulk</h2>
+  <p class="lead">Cocoa by the sack, couverture for coating and moulding, and ready sauces and spreads for the pastry counter.</p>
+  <div class="two">
+    <div class="vidcol"><div class="phone"><div class="screen"><span>Chocolate video<br>(add assets/video/chocolate.mp4)</span>
+      <video class="autov" muted loop playsinline preload="metadata" poster="assets/img/chocolate-poster.jpg"><source src="assets/video/chocolate.mp4" type="video/mp4"></video></div></div></div>
+    <div style="display:flex;flex-direction:column">
+      <div class="clist" style="flex:1">
+        <article class="cc"><b>Altinmarka alkalized cocoa</b><span>Alkalized cocoa powder, 10 to 12 percent fat, in 25 kg sacks.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote →</a></article>
+        <article class="cc"><b>Barry Callebaut couverture</b><span>Couverture chocolate for ganache, coating and moulding.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote →</a></article>
+        <article class="cc"><b>Dr.baker Chocolate Sauce</b><span>Squeeze bottle for plating, drizzling and dipping.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Chocolate%20Sauce." target="_blank" rel="noopener">Get a quote →</a></article>
+        <article class="cc"><b>Dr.baker Chocolate Hazelnut Sauce</b><span>1.25 kg bottle for ice cream, waffles and desserts.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Chocolate%20Hazelnut%20Sauce%201.25kg." target="_blank" rel="noopener">Get a quote →</a></article>
+        <article class="cc"><b>Dr.baker Hazelnut Praline</b><span>Bulk bucket for fillings, layers and toppings.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Hazelnut%20Praline." target="_blank" rel="noopener">Get a quote →</a></article>
+        <article class="cc"><b>Dr.baker Pistachio Spread</b><span>4.5 kg tub for desserts and fillings.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Pistachio%20Spread." target="_blank" rel="noopener">Get a quote →</a></article>
+
+      </div>
+      <div class="cguides" aria-label="Chocolate guides">
+        <a href="https://www.skypex.co.ke/compound-vs-couverture-chocolate/" target="_blank" rel="noopener">Compound vs couverture</a>
+        <a href="https://www.skypex.co.ke/why-your-ganache-seizes-and-how-to-stop-it/" target="_blank" rel="noopener">Why ganache seizes</a>
+        <a href="https://www.skypex.co.ke/natural-vs-dutch-processed-cocoa-powder/" target="_blank" rel="noopener">Natural vs Dutch cocoa</a>
+        <a href="https://www.skypex.co.ke/where-can-i-buy-barry-callebaut-chocolate-in-kenya/" target="_blank" rel="noopener">Barry Callebaut in Kenya</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- VIDEOS -->
+<section id="reels"><div class="wrap">
+  <span class="kicker">Product videos</span>
+  <h2 class="h2">See Pristine, fillings, glazes, sprinkles and yeast in action</h2>
+  <p class="lead">Tap a product to play its video and request a wholesale quote.</p>
+  <div class="reelwrap">
+    <div class="vidcol"><div class="phone"><div class="screen" id="screen">
       <video class="on" muted loop playsinline preload="metadata" poster="assets/img/pristine-poster.jpg" data-k="pristine"><source src="assets/video/pristine.mp4" type="video/mp4"></video>
       <video muted loop playsinline preload="none" poster="assets/img/frutti-poster.jpg" data-k="frutti"><source data-src="assets/video/frutti.mp4" type="video/mp4"></video>
       <video muted loop playsinline preload="none" poster="assets/img/glaze-poster.jpg" data-k="glaze"><source data-src="assets/video/glaze.mp4" type="video/mp4"></video>
       <video muted loop playsinline preload="none" poster="assets/img/sprinkles-poster.jpg" data-k="sprinkles"><source data-src="assets/video/sprinkles.mp4" type="video/mp4"></video>
       <video muted loop playsinline preload="none" poster="assets/img/yeast-poster.jpg" data-k="yeast"><source data-src="assets/video/yeast.mp4" type="video/mp4"></video>
-    </div></div>
-    <div>
-      <div class="tabs" role="tablist" aria-label="Products">
-        <button class="tab" role="tab" aria-selected="true" data-k="pristine"><img src="assets/img/pristine.jpg" alt=""><span><b>Pristine</b><small>Purely Pristine, top-choice baking essentials</small></span></button>
-        <button class="tab" role="tab" aria-selected="false" data-k="frutti"><img src="assets/img/frutti.jpg" alt=""><span><b>Frutti fruit fillings</b><small>Skybake &amp; Frutti lines</small></span></button>
-        <button class="tab" role="tab" aria-selected="false" data-k="glaze"><img src="assets/img/glaze.jpg" alt=""><span><b>Skybake mirror glaze</b><small>Caramel, chocolate, clear</small></span></button>
-        <button class="tab" role="tab" aria-selected="false" data-k="sprinkles"><img src="assets/img/sprinkles.jpg" alt=""><span><b>Skypower sprinkles</b><small>Crispy chips and vermicelli</small></span></button>
-        <button class="tab" role="tab" aria-selected="false" data-k="yeast"><img src="assets/img/yeast.jpg" alt=""><span><b>Bruggeman instant yeast</b><small>500 g packs</small></span></button>
-      </div>
-      <div class="rdetail" aria-live="polite">
-        <span class="pill" id="p1">Wholesale bulk</span><span class="pill">Retail at supermarkets</span>
-        <h3 id="rt">Pristine</h3>
-        <p id="rd">Purely Pristine: the cream range we put at the centre of our shelf. Ask for the pack that fits your menu, from decorating to cooking.</p>
-        <a class="btn btn-wa" id="rq" href="#" target="_blank" rel="noopener">Quote this product</a>
-        <p class="rnote">Pack sizes and prices are confirmed on WhatsApp when you order.</p>
-      </div>
+    </div></div></div>
+    <div class="tabs" role="tablist" aria-label="Products">
+      <div class="tab" role="tab" tabindex="0" aria-selected="false" data-k="pristine"><b>Pristine whipping cream</b><small>Purely Pristine, top-choice baking essentials.</small><span class="more"><small>Pristine is the cream range at the centre of our shelf, from decorating cakes and desserts to cooking.</small><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Pristine%20Whipping%20Cream." target="_blank" rel="noopener">Get a quote</a></span></div>
+      <div class="tab" role="tab" tabindex="0" aria-selected="false" data-k="frutti"><b>Frutti fruit fillings</b><small>Skybake and Frutti lines.</small><span class="more"><small>Mango, Blueberry, Strawberry and Raspberry fillings, ready for tarts, cheesecakes and cakes.</small><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Frutti%20fruit%20fillings." target="_blank" rel="noopener">Get a quote</a></span></div>
+      <div class="tab" role="tab" tabindex="0" aria-selected="false" data-k="glaze"><b>Skybake mirror glaze</b><small>Caramel, chocolate and clear.</small><span class="more"><small>Three mirror glazes in tubs for the glossy finish that makes a cake stand out in a display.</small><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20mirror%20glaze." target="_blank" rel="noopener">Get a quote</a></span></div>
+      <div class="tab" role="tab" tabindex="0" aria-selected="false" data-k="sprinkles"><b>Skypower sprinkles</b><small>Crispy chips and vermicelli.</small><span class="more"><small>Colourful sprinkles and vermicelli in pouches for fast, tidy decoration.</small><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skypower%20sprinkles%20and%20vermicelli." target="_blank" rel="noopener">Get a quote</a></span></div>
+      <div class="tab" role="tab" tabindex="0" aria-selected="false" data-k="yeast"><b>Bruggeman instant yeast</b><small>500 g packs.</small><span class="more"><small>Instant yeast for bread, buns and doughnuts, supplied in bulk.</small><a class="btn btn-wa btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Bruggeman%20instant%20yeast." target="_blank" rel="noopener">Get a quote</a></span></div>
+
     </div>
   </div>
 </div></section>
 
-<!-- RANGE -->
-<section class="range" id="range"><div class="wrap">
-  <span class="kicker">The full range</span>
-  <h2 class="h2 rv" style="margin-block:14px 12px">Cream is just one shelf. Here is the rest.</h2>
-  <p class="lead rv">Mixes, sugar paste, cream, sauces, fillings, glazes, cocoa, bread and packaging from brands bakers already trust. Filter by what you are making.</p>
-  <div class="fchips" id="fchips" role="group" aria-label="Filter products"><button aria-pressed="true" data-f="all">All products</button><button aria-pressed="false" data-f="Cakes & mixes">Cakes & mixes</button><button aria-pressed="false" data-f="Cream & fillings">Cream & fillings</button><button aria-pressed="false" data-f="Sauces & spreads">Sauces & spreads</button><button aria-pressed="false" data-f="Finishing">Finishing</button><button aria-pressed="false" data-f="Chocolate & cocoa">Chocolate & cocoa</button><button aria-pressed="false" data-f="Bread & yeast">Bread & yeast</button><button aria-pressed="false" data-f="Packaging">Packaging</button></div>
-  <div class="pgrid" id="pgrid">
-      <article class="pc rv" data-cat="Cakes & mixes"><div class="pimg " data-slot="Skybake Super Veg Vanilla Cake Mix"><img src="assets/img/cakemix.jpg" alt="Skybake Super Veg Vanilla Cake Mix" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes & mixes</span><h3>Skybake Super Veg Vanilla Cake Mix</h3><p>Vanilla cake mix for a consistent crumb, batch after batch.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Super%20Veg%20Vanilla%20Cake%20Mix." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cakes & mixes"><div class="pimg " data-slot="Skybake Vanilla All Purpose Cake Mix"><img src="assets/img/cakemix25.jpg" alt="Skybake Vanilla All Purpose Cake Mix" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes & mixes</span><h3>Skybake Vanilla All Purpose Cake Mix</h3><p>All purpose vanilla mix in 25 kg sacks for working bakeries.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Vanilla%20All%20Purpose%20Cake%20Mix%2025kg." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cakes & mixes"><div class="pimg " data-slot="Skybake White Sugar Paste"><img src="assets/img/sugarpaste.jpg" alt="Skybake White Sugar Paste" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes & mixes</span><h3>Skybake White Sugar Paste</h3><p>1 kg tubs of white sugar paste for covering and modelling.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20White%20Sugar%20Paste." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cakes & mixes"><div class="pimg " data-slot="Skybake Desiccated Coconut"><img src="assets/img/coconut.jpg" alt="Skybake Desiccated Coconut" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cakes & mixes</span><h3>Skybake Desiccated Coconut</h3><p>100 percent unsweetened desiccated coconut, 1 kg, for baking and decorating.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Desiccated%20Coconut%201kg." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cream & fillings"><div class="pimg cover" data-slot="Pristine Whipping Cream"><img src="assets/img/pristine.jpg" alt="Pristine Whipping Cream" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream & fillings</span><h3>Pristine Whipping Cream</h3><p>Purely Pristine: top-choice baking essentials for decorating and desserts.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Pristine%20Whipping%20Cream." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cream & fillings"><div class="pimg " data-slot="Dr.baker Prestige whipping cream"><img src="assets/img/prestige.jpg" alt="Dr.baker Prestige whipping cream" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream & fillings</span><h3>Dr.baker Prestige whipping cream</h3><p>Vegetable fat whipping cream, UHT, 25 percent fat, 1 L.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Prestige%20whipping%20cream." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cream & fillings"><div class="pimg " data-slot="Dr.baker Savor cooking cream"><img src="assets/img/savor.jpg" alt="Dr.baker Savor cooking cream" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream & fillings</span><h3>Dr.baker Savor cooking cream</h3><p>Vegetable fat cooking cream, UHT, 15 percent fat, 1 L.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Savor%20cooking%20cream." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cream & fillings"><div class="pimg " data-slot="Dr.baker Sugar Cream Chantilly"><img src="assets/img/drbaker.jpg" alt="Dr.baker Sugar Cream Chantilly" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream & fillings</span><h3>Dr.baker Sugar Cream Chantilly</h3><p>Sugar cream chantilly in a bulk bag from the Dr.baker range.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Sugar%20Cream%20Chantilly." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Cream & fillings"><div class="pimg cover" data-slot="Frutti fruit fillings"><img src="assets/img/frutti.jpg" alt="Frutti fruit fillings" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Cream & fillings</span><h3>Frutti fruit fillings</h3><p>Mango, Blueberry, Strawberry and Raspberry fillings under the Skybake and Frutti lines.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Frutti%20fruit%20fillings." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Sauces & spreads"><div class="pimg " data-slot="Dr.baker Pistachio Spread"><img src="assets/img/pistachio.jpg" alt="Dr.baker Pistachio Spread" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Sauces & spreads</span><h3>Dr.baker Pistachio Spread</h3><p>Pistachio spread in a 4.5 kg tub for fillings and desserts.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Pistachio%20Spread." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Sauces & spreads"><div class="pimg " data-slot="Dr.baker Hazelnut Praline"><img src="assets/img/hazelnut.jpg" alt="Dr.baker Hazelnut Praline" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Sauces & spreads</span><h3>Dr.baker Hazelnut Praline</h3><p>Hazelnut praline in a bulk bucket for filling, layering and topping.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Hazelnut%20Praline." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Sauces & spreads"><div class="pimg " data-slot="Dr.baker Chocolate Sauce"><img src="assets/img/chocsauce.jpg" alt="Dr.baker Chocolate Sauce" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Sauces & spreads</span><h3>Dr.baker Chocolate Sauce</h3><p>Squeeze-bottle chocolate sauce for plating, drizzling and dipping.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Chocolate%20Sauce." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Finishing"><div class="pimg cover" data-slot="Skybake Mirror Glaze"><img src="assets/img/glaze.jpg" alt="Skybake Mirror Glaze" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Finishing</span><h3>Skybake Mirror Glaze</h3><p>Clear, Caramel and Chocolate mirror glaze tubs for a glossy finish.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20mirror%20glaze." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Finishing"><div class="pimg " data-slot="Skybake Clear Mirror Glaze"><img src="assets/img/clearglaze.jpg" alt="Skybake Clear Mirror Glaze" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Finishing</span><h3>Skybake Clear Mirror Glaze</h3><p>1 kg tub of clear mirror glaze to shine fruit tarts and cakes.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Clear%20Mirror%20Glaze." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Finishing"><div class="pimg cover" data-slot="Skypower sprinkles"><img src="assets/img/sprinkles.jpg" alt="Skypower sprinkles" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Finishing</span><h3>Skypower sprinkles</h3><p>Crispy chips and vermicelli in pouches for quick, colourful decoration.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skypower%20sprinkles%20and%20vermicelli." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Chocolate & cocoa"><div class="pimg " data-slot="Altinmarka alkalized cocoa powder"><img src="assets/img/cocoa.jpg" alt="Altinmarka alkalized cocoa powder" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Chocolate & cocoa</span><h3>Altinmarka alkalized cocoa powder</h3><p>Alkalized cocoa powder, 10 to 12 percent fat, in 25 kg sacks.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc text rv" data-cat="Chocolate & cocoa"><div class="pimg"><span>Barry Callebaut</span></div><div class="pbody"><span class="cat">Chocolate & cocoa</span><h3>Barry Callebaut chocolate</h3><p>Couverture chocolate for ganache, coating and moulding.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Bread & yeast"><div class="pimg " data-slot="Komplet Crusty Rye 50"><img src="assets/img/komplet.jpg" alt="Komplet Crusty Rye 50" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Bread & yeast</span><h3>Komplet Crusty Rye 50</h3><p>Concentrated rye bread mix in 10 kg sacks from the Komplet bread range.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Komplet%20Crusty%20Rye%2050." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Bread & yeast"><div class="pimg " data-slot="Victoria instant yeast"><img src="assets/img/victoria.jpg" alt="Victoria instant yeast" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Bread & yeast</span><h3>Victoria instant yeast</h3><p>500 g packs of instant yeast for bread, buns and doughnuts.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Victoria%20instant%20yeast%20500g." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Bread & yeast"><div class="pimg cover" data-slot="Bruggeman instant yeast"><img src="assets/img/yeast.jpg" alt="Bruggeman instant yeast" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Bread & yeast</span><h3>Bruggeman instant yeast</h3><p>500 g Bruggeman instant yeast, a baker's staple supplied in bulk.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Bruggeman%20instant%20yeast." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc rv" data-cat="Packaging"><div class="pimg " data-slot="Paper loaf baking moulds"><img src="assets/img/moulds.jpg" alt="Paper loaf baking moulds" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="cat">Packaging</span><h3>Paper loaf baking moulds</h3><p>Disposable paper moulds for loaves and tea cakes. Bake and sell in the same tin.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20paper%20loaf%20baking%20moulds." target="_blank" rel="noopener">Get a quote</a></div></article>
-      <article class="pc text rv" data-cat="Packaging"><div class="pimg"><span>Hotpack · Nova Cart</span></div><div class="pbody"><span class="cat">Packaging</span><h3>Hotpack and Nova Cart</h3><p>Cake boxes, cups, containers and greaseproof papers.</p><a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Hotpack%20and%20Nova%20Cart%20packaging." target="_blank" rel="noopener">Get a quote</a></div></article>
-  </div>
-  <p class="rangefoot">Packs shown are examples from our shelves. Sizes, availability and prices are confirmed on WhatsApp. Looking for something not listed? Ask, we stock more than fits on one page.</p>
-</div></section>
-
-<!-- CHOCOLATE -->
-<section class="choc" id="chocolate"><div class="wrap">
-  <span class="kicker">Chocolate &amp; cocoa</span>
-  <h2 class="h2 rv" style="margin-block:14px 12px">For the ganache, the glaze and the drizzle.</h2>
-  <p class="lead rv">Cocoa by the sack, couverture for coating and moulding, plus ready sauces and spreads for the pastry counter.</p>
-  <div class="cgrid">
-    <div class="cvid rv"><div class="screen"><span>Chocolate reel<br>(add assets/video/chocolate.mp4)</span>
-      <video class="autov" muted loop playsinline preload="metadata" poster="assets/img/chocolate-poster.jpg"><source src="assets/video/chocolate.mp4" type="video/mp4"></video></div></div>
-    <div>
-      <div class="clist">
-        <article class="cc rv"><b>Altinmarka alkalized cocoa</b><span>10 to 12 percent fat, 25 kg sacks.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote →</a></article>
-        <article class="cc rv"><b>Barry Callebaut couverture</b><span>For ganache, coating and moulding.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote →</a></article>
-        <article class="cc rv"><b>Dr.baker Chocolate Sauce</b><span>Squeeze bottle for plating and drizzling.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Chocolate%20Sauce." target="_blank" rel="noopener">Get a quote →</a></article>
-        <article class="cc rv"><b>Dr.baker Hazelnut Praline</b><span>Bulk bucket for fillings and layers.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Hazelnut%20Praline." target="_blank" rel="noopener">Get a quote →</a></article>
-        <article class="cc rv"><b>Dr.baker Pistachio Spread</b><span>4.5 kg tub for desserts and fillings.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Pistachio%20Spread." target="_blank" rel="noopener">Get a quote →</a></article>
-        <article class="cc rv"><b>Skybake Chocolate Mirror Glaze</b><span>A deep, glossy chocolate finish.</span><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20chocolate%20mirror%20glaze." target="_blank" rel="noopener">Get a quote →</a></article>
-      </div>
-      <div class="cguides" aria-label="Chocolate guides">
-        <a href="https://www.skypex.co.ke/compound-vs-couverture-chocolate/" target="_blank" rel="noopener">Compound vs couverture</a>
-        <a href="https://www.skypex.co.ke/why-your-ganache-seizes-and-how-to-stop-it/" target="_blank" rel="noopener">Why ganache seizes</a>
-        <a href="https://www.skypex.co.ke/where-can-i-buy-barry-callebaut-chocolate-in-kenya/" target="_blank" rel="noopener">Where to buy Barry Callebaut</a>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- PRISTINE -->
-<section class="pristine" id="pristine"><div class="scal-t" aria-hidden="true"></div><div class="wrap pg">
-  <div>
-    <span class="kicker">Hero product</span>
-    <h2 class="rv">Pristine Whipping Cream, stocked for working bakers.</h2>
-    <p class="big rv">A cake that leaks cream on the way to the client costs you the sale and the next order. Pristine is the cream we put our name behind, for decorating cakes, pastries and desserts with a smooth finish.</p>
-    <ul class="facts">
-      <li><b>Best for</b>Decorating, filling, desserts</li>
-      <li><b>Supplied</b>Wholesale bulk</li>
-      <li><b>Pack sizes</b>[CONFIRM from the pack label]</li>
-      <li><b>Storage</b>[CONFIRM from the pack label]</li>
-    </ul>
-    <div class="row" style="display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn btn-orange" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20want%20to%20order%20Pristine%20Whipping%20Cream%20in%20bulk." target="_blank" rel="noopener">Order Pristine</a>
-      <a class="btn btn-line" href="https://www.skypex.co.ke/weepy-or-runny-whipped-cream-fixing-pristine-whipping-cream-mistakes/" target="_blank" rel="noopener">Fix a runny whip</a>
-    </div>
-    <p class="note">Fill the bracketed facts from the pack before launch. Do not publish a claim you cannot show.</p>
-  </div>
-  <div class="photo"><div class="card"><img src="assets/img/pristine.jpg" alt="Pristine whipping cream range with a bowl of cream" width="900" height="476" loading="lazy"><span>PURELY PRISTINE</span></div><div class="badge"><i>Since<br>2009</i></div></div>
-</div></section>
-
-<!-- ORDER TOOLS -->
-<section id="order"><div class="wrap">
-  <span class="kicker">Order in minutes</span>
-  <h2 class="h2 rv" style="margin-block:14px 12px">No account, no checkout. Just WhatsApp.</h2>
-  <p class="lead rv">Build your own list, or start from a sheet we made around how bakeries actually restock. Quantities are agreed together with our team.</p>
-  <div class="tools">
-    <form class="build rv" id="build" aria-labelledby="bt">
+<!-- ORDER -->
+<section class="band" id="order"><div class="wrap">
+  <span class="kicker">How to order</span>
+  <h2 class="h2">Order baking ingredients in bulk on WhatsApp</h2>
+  <p class="lead">No account and no checkout. Build your list here and it opens in WhatsApp, ready to send.</p>
+  <div class="two">
+    <form class="build" id="build" aria-labelledby="bt">
       <h3 id="bt">Build your order in 30 seconds</h3>
       <p class="sub">Your choices become a ready-typed WhatsApp message.</p>
       <label for="who-sel">I am a</label>
       <select id="who-sel"><option>small bakery or cafe</option><option>hotel, caterer or institution</option><option>shop or reseller</option><option>cake business</option><option>home baker</option></select>
       <fieldset><legend>I need</legend><div class="chips">
         <label><input type="checkbox" name="need" value="Pristine Whipping Cream" checked><span>Pristine cream</span></label>
+        <label><input type="checkbox" name="need" value="cake mixes"><span>Cake mixes</span></label>
+        <label><input type="checkbox" name="need" value="sugar paste"><span>Sugar paste</span></label>
         <label><input type="checkbox" name="need" value="Frutti fruit fillings"><span>Fruit fillings</span></label>
         <label><input type="checkbox" name="need" value="Skybake mirror glaze"><span>Mirror glaze</span></label>
-        <label><input type="checkbox" name="need" value="sprinkles and vermicelli"><span>Sprinkles</span></label>
-        <label><input type="checkbox" name="need" value="Bruggeman instant yeast"><span>Yeast</span></label>
-        <label><input type="checkbox" name="need" value="chocolate and cocoa"><span>Chocolate</span></label>
-        <label><input type="checkbox" name="need" value="cake mixes"><span>Cake mixes</span></label>
-        <label><input type="checkbox" name="need" value="Dr.baker cream, sauces and spreads"><span>Dr.baker cream and sauces</span></label>
-        <label><input type="checkbox" name="need" value="sugar paste"><span>Sugar paste</span></label>
+        <label><input type="checkbox" name="need" value="chocolate, cocoa and sauces"><span>Chocolate and cocoa</span></label>
+        <label><input type="checkbox" name="need" value="instant yeast and bread mixes"><span>Yeast and bread</span></label>
         <label><input type="checkbox" name="need" value="boxes and packaging"><span>Packaging</span></label>
       </div></fieldset>
       <label for="qty">How often do you buy</label>
@@ -658,117 +488,89 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
       <label for="nm">Your name or business</label>
       <input type="text" id="nm" placeholder="e.g. Wanjiru, Sweet Crumbs Kitchen" autocomplete="organization">
       <a class="btn btn-wa" id="send" href="#" target="_blank" rel="noopener">Send my list on WhatsApp</a>
-      <p class="fine">WhatsApp +254 722 386 394 &nbsp;|&nbsp; Phone +254 735 610 504</p>
+      <p class="fine">WhatsApp +254 722 386 394</p>
     </form>
-    <div class="sheets">
-      <article class="slip rv"><span class="for">Small bakery</span><h3>Weekly restock</h3><p>Cartons of Pristine, your top-selling mixes, fillings, glazes, yeast, boxes and cups.</p><a class="btn btn-orange" data-list="Weekly restock for a small bakery: cartons of Pristine, top-selling cake mixes, fruit fillings, mirror glazes, yeast, boxes and cups" href="#">Send this sheet</a></article>
-      <article class="slip rv"><span class="for">Cake business</span><h3>Wedding season</h3><p>Cream for tiered cakes, mirror glaze, chocolate for ganache, sprinkles, mini cake packaging and a stock buffer.</p><a class="btn btn-orange" data-list="Wedding season stock: cream for tiered cakes, mirror glaze, chocolate for ganache, sprinkles, mini cake packaging, buffer stock" href="#">Send this sheet</a></article>
-      <article class="slip rv"><span class="for">Hotel or caterer</span><h3>Monthly bulk</h3><p>A fixed monthly order of cream, chocolate and fillings. Tell us your volume and we confirm availability.</p><a class="btn btn-orange" data-list="Monthly bulk supply for a hotel or caterer: cream, chocolate, fruit fillings, glazes" href="#">Send this sheet</a></article>
-      <p class="tnote">We never guess how much you bake. We ask, then quote.</p>
+    <div class="steps">
+      <div class="step"><i>1</i><div><h3>Tell us what you bake</h3><p>Pick your products and how often you buy. We never guess quantities.</p></div></div>
+      <div class="step"><i>2</i><div><h3>We confirm stock and price</h3><p>A real person at Skypex replies on WhatsApp during opening hours with availability and wholesale prices.</p></div></div>
+      <div class="step"><i>3</i><div><h3>Collect or arrange delivery</h3><p>Pick up at our Baba Dogo Road counter. [CONFIRM: delivery areas, fees and lead time]</p></div></div>
     </div>
   </div>
 </div></section>
 
-<!-- NUMBERS -->
-<section class="nums"><div class="wrap ngrid">
-  <div class="num rv"><b data-to="17" data-suffix="">17</b><span>years supplying Nairobi's bakers (since 2009)</span></div>
-  <div class="num rv"><b data-to="10" data-suffix="">10</b><span>brands on our shelves, from cream to packaging</span></div>
-  <div class="num rv"><b data-to="70" data-suffix="+">70+</b><span>baker's guides on our blog</span></div>
-  <div class="num rv"><b data-to="6" data-suffix="">6</b><span>days a week the counter is open (Mon to Sat)</span></div>
-</div></section>
-
-<!-- WHY -->
-<section><div class="wrap why">
-  <div>
-    <span class="kicker">Why bakers stay with us</span>
-    <h2 class="h2 rv" style="margin-block:14px 10px">A supplier you can actually talk to.</h2>
-    <p class="lead rv">Skypex Supplies has served Nairobi's bakers since 2009. We work with leading baking ingredient makers, and our team gives product training and demonstrations, so you are never left guessing why a bake failed.</p>
-    <dl>
-      <div><dt>You can visit</dt><dd>Our counter is at G16, Spectrum Business Park, Baba Dogo Road. Come in, ask, see the product.</dd></div>
-      <div><dt>You get advice, not just a price</dt><dd>Cream will not whip? Cake sinks? Ganache splits? Ask us, or read the answer in our guides.</dd></div>
-      <div><dt>You can learn on site</dt><dd>We run cake decorating classes and product demonstrations in Nairobi.</dd></div>
-    </dl>
-    <div class="desk"><b>Who answers your WhatsApp</b><br>[ADD: name, role and a real photo of the person on the Skypex baking desk. A named person builds more trust than a logo.]</div>
-  </div>
-  <div class="mosaic">
-    <figure class="rv"><img src="assets/img/sprinkles.jpg" alt="Skypower sprinkle and vermicelli pouches" loading="lazy"><figcaption>Skypower sprinkles</figcaption></figure>
-    <figure class="rv"><img src="assets/img/yeast.jpg" alt="Bruggeman instant yeast 500 g pack" loading="lazy"><figcaption>Bruggeman yeast</figcaption></figure>
-    <figure class="rv"><img src="assets/img/glaze.jpg" alt="Skybake mirror glaze tubs" loading="lazy"><figcaption>Mirror glaze</figcaption></figure>
-    <figure class="rv"><img src="assets/img/frutti.jpg" alt="Frutti fruit fillings" loading="lazy"><figcaption>Frutti fillings</figcaption></figure>
+<!-- ABOUT -->
+<section class="why" id="why"><div class="wrap">
+  <span class="kicker">About Skypex Supplies</span>
+  <h2 class="h2">A baking ingredients supplier in Nairobi you can talk to</h2>
+  <div class="two">
+    <div>
+      <p class="lead">Skypex Supplies Ltd has supported Nairobi's bakers since 2009. We work with leading baking ingredient makers, and our team runs product training, demonstrations and cake decorating classes.</p>
+      <dl>
+        <div><dt>Visit the counter</dt><dd>G16, Spectrum Business Park, Baba Dogo Road. Come in, ask, and see the product before you buy.</dd></div>
+        <div><dt>Get advice, not just a price</dt><dd>Cream will not whip? Cake sinks? Ganache splits? Ask us, or read the answer in our guides.</dd></div>
+      </dl>
+      <div class="desk"><b>Who answers your WhatsApp:</b> [ADD: name, role and a real photo of the person on the Skypex baking desk]</div>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b data-to="17">17</b><span>years supplying Nairobi's bakers, since 2009</span></div>
+      <div class="stat rv"><b data-to="14">14</b><span>baking brands on our shelves</span></div>
+      <div class="stat rv"><b data-to="70" data-suffix="+">70+</b><span>baking guides on the Skypex blog</span></div>
+    </div>
   </div>
 </div></section>
 
 <!-- GUIDES -->
-<section id="learn" style="padding-top:0"><div class="wrap">
-  <span class="kicker">Baker's guides</span>
-  <h2 class="h2 rv" style="margin-block:14px 10px">Answers to what bakers ask us at the counter.</h2>
+<section class="band" id="learn"><div class="wrap">
+  <span class="kicker">Baking guides</span>
+  <h2 class="h2">Answers to what Kenyan bakers ask at the counter</h2>
   <div class="posts">
-    <a class="post rv" href="https://www.skypex.co.ke/whipping-cream-vs-cooking-cream/"><span class="tag">Cream</span><h3>Whipping cream vs cooking cream</h3><span class="go">Read the guide →</span></a>
-    <a class="post rv" href="https://www.skypex.co.ke/weepy-or-runny-whipped-cream-fixing-pristine-whipping-cream-mistakes/"><span class="tag">Troubleshooting</span><h3>Weepy or runny whipped cream? How to fix it</h3><span class="go">Read the guide →</span></a>
-    <a class="post rv" href="https://www.skypex.co.ke/why-does-my-cake-sink-in-the-middle/"><span class="tag">Troubleshooting</span><h3>Why does my cake sink in the middle?</h3><span class="go">Read the guide →</span></a>
-    <a class="post rv" href="https://www.skypex.co.ke/compound-vs-couverture-chocolate/"><span class="tag">Chocolate</span><h3>Compound vs couverture chocolate</h3><span class="go">Read the guide →</span></a>
-    <a class="post rv" href="https://www.skypex.co.ke/how-much-should-a-small-nairobi-bakery-budget-monthly-for-ingredients-and-packaging/"><span class="tag">Business</span><h3>How much should a small Nairobi bakery budget each month?</h3><span class="go">Read the guide →</span></a>
-    <a class="post rv" href="https://www.skypex.co.ke/where-can-i-buy-barry-callebaut-chocolate-in-kenya/"><span class="tag">Sourcing</span><h3>Where can I buy Barry Callebaut chocolate in Kenya?</h3><span class="go">Read the guide →</span></a>
+    <a class="post rv" href="https://www.skypex.co.ke/whipping-cream-vs-cooking-cream/"><span class="tg">Cream</span><h3>Whipping cream vs cooking cream</h3><span class="go">Read the guide →</span></a>
+    <a class="post rv" href="https://www.skypex.co.ke/weepy-or-runny-whipped-cream-fixing-pristine-whipping-cream-mistakes/"><span class="tg">Troubleshooting</span><h3>Weepy or runny whipped cream? How to fix it</h3><span class="go">Read the guide →</span></a>
+    <a class="post rv" href="https://www.skypex.co.ke/why-does-my-cake-sink-in-the-middle/"><span class="tg">Troubleshooting</span><h3>Why does my cake sink in the middle?</h3><span class="go">Read the guide →</span></a>
+    <a class="post rv" href="https://www.skypex.co.ke/how-to-choose-a-cake-mix-that-doesnt-taste-artificial/"><span class="tg">Cake mixes</span><h3>How to choose a cake mix that does not taste artificial</h3><span class="go">Read the guide →</span></a>
+    <a class="post rv" href="https://www.skypex.co.ke/storing-cake-mixes-nairobi-heat/"><span class="tg">Storage</span><h3>Storing cake mixes in Nairobi heat</h3><span class="go">Read the guide →</span></a>
+    <a class="post rv" href="https://www.skypex.co.ke/how-much-should-a-small-nairobi-bakery-budget-monthly-for-ingredients-and-packaging/"><span class="tg">Business</span><h3>How much should a small Nairobi bakery budget each month?</h3><span class="go">Read the guide →</span></a>
   </div>
 </div></section>
 
-<section class="reviews" id="reviews"><div class="wrap">
-  <span class="kicker">What bakers say</span>
-  <h2 class="h2" style="margin-block:14px 8px">Seen us on Google? Tell the next baker.</h2>
-  <p class="stars" aria-hidden="true">★★★★★</p>
-  <p class="lead">Our Google Business Profile is where bakers check us before they call. Read what customers wrote, or add your own review. It takes a minute.</p>
-  <div class="gbox">
-    <a class="btn btn-g" href="https://g.page/r/CflgQST5XwsnEAI/review" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.5-.2-2.2H12v4.2h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.4Z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3C3.7 21.6 7.5 24 12 24Z"/><path fill="#FBBC05" d="M5.6 14.7a7.2 7.2 0 0 1 0-4.6v-3H1.8a12 12 0 0 0 0 10.6l3.8-3Z"/><path fill="#EA4335" d="M12 4.8c1.7 0 3.2.6 4.4 1.7l3.3-3.3A12 12 0 0 0 1.8 7.1l3.8 3C6.5 6.8 9 4.8 12 4.8Z"/></svg>Leave a Google review</a>
-    <a class="btn btn-sky" href="https://www.google.com/search?q=Skypex+Supplies+Limited&hl=en" target="_blank" rel="noopener">Read our Google reviews</a>
+<!-- GOOGLE + INSTAGRAM -->
+<section id="community"><div class="wrap proof">
+  <div class="card" id="reviews">
+    <span class="kicker">Google reviews</span>
+    <h2>Seen us on Google? Tell the next baker.</h2>
+    <p class="stars" aria-hidden="true">★★★★★</p>
+    <p>Bakers check our Google Business Profile before they call. Read what customers wrote, or add your own review. It takes a minute.</p>
+    <div class="revslot">Paste 2 or 3 real Google reviews here with the reviewer's first name and business. Do not invent testimonials.</div>
+    <div class="row">
+      <a class="btn btn-g btn-sm" href="https://g.page/r/CflgQST5XwsnEAI/review" target="_blank" rel="noopener">Leave a Google review</a>
+      <a class="btn btn-sky btn-sm" href="https://www.google.com/search?q=Skypex+Supplies+Limited&hl=en" target="_blank" rel="noopener">Read our reviews</a>
+    </div>
   </div>
-  <div class="revslot" style="margin-top:26px">Paste 3 real Google reviews here with the reviewer's first name and business. Add a photo of their bake if they allow it. Do not invent testimonials. One true review with a name beats ten anonymous ones.</div>
-</div></section>
-
-<section class="insta" id="instagram"><div class="wrap">
-  <span class="kicker">Follow the bakes</span>
-  <h2 class="h2 rv" style="margin-block:14px 10px;color:#fff">On Instagram: @skypexsuppliesltd</h2>
-  <p class="lead" style="color:#C5D3DF">New product reels, glaze and filling ideas, and updates from the counter.</p>
-  <div class="igrid">
-    <a class="ig rv" href="https://www.instagram.com/reel/De4ns9sDCoR/" target="_blank" rel="noopener"><img src="assets/img/frutti-poster.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">&#9654;</span><b>Your baking. Our ingredients.</b><small>SkyBake &amp; Frutti fruit fillings</small></a>
-    <a class="ig rv p1" href="https://www.instagram.com/reel/De11Ok-CTXU/" target="_blank" rel="noopener"><img src="assets/img/glaze-poster.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">&#9654;</span><b>Make your cakes glow</b><small>Caramel glaze finish</small></a>
-    <a class="ig rv p2" href="https://www.instagram.com/reel/DejefH7h_pi/" target="_blank" rel="noopener"><img src="assets/img/glaze-poster.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">&#9654;</span><b>Smooth. Rich. Glossy.</b><small>Chocolate glaze finish</small></a>
-    <a class="ig rv pat" href="https://www.instagram.com/p/DetFdwnD-w7/" target="_blank" rel="noopener"><b>Celebrating Kenya's everyday heroes</b><small>Mashujaa Day</small></a>
-    <a class="ig rv pat" href="https://www.instagram.com/p/Dei1u7Bjw_q/" target="_blank" rel="noopener"><b>The food that brings us together</b><small>World Food Day</small></a>
-  </div>
-  <div class="social" aria-label="Skypex on social media">
-    <a href="https://www.instagram.com/skypexsuppliesltd/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.facebook.com/SkypexSuppliesLtd/" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://www.tiktok.com/@skypexsuppliesltd" target="_blank" rel="noopener">TikTok</a>
-    <a href="https://www.youtube.com/@SkypexSuppliesLtd" target="_blank" rel="noopener">YouTube</a>
-    <a href="https://g.page/r/CflgQST5XwsnEAI/review" target="_blank" rel="noopener">Google reviews</a>
+  <div class="card" id="instagram">
+    <span class="kicker">Instagram</span>
+    <h2>@skypexsuppliesltd</h2>
+    <p>New product videos, glaze and filling ideas, and updates from the counter.</p>
+    <div class="igs">
+      <a class="ig" href="https://www.instagram.com/reel/De4ns9sDCoR/" target="_blank" rel="noopener"><img src="assets/img/frutti-poster.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">&#9654;</span><b>Fruit fillings reel</b></a>
+      <a class="ig" href="https://www.instagram.com/reel/De11Ok-CTXU/" target="_blank" rel="noopener"><img src="assets/img/glaze-poster.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="play">&#9654;</span><b>Caramel glaze reel</b></a>
+    </div>
+    <div class="row">
+      <a class="btn btn-sky btn-sm" href="https://www.instagram.com/skypexsuppliesltd/" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
   </div>
 </div></section>
 
-<section id="faq"><div class="wrap">
+<!-- FAQ -->
+<section class="band" id="faq"><div class="wrap">
   <span class="kicker">Questions</span>
-  <h2 class="h2" style="margin-block:14px 0">Before you message us.</h2>
+  <h2 class="h2">Wholesale baking supplies in Nairobi: your questions</h2>
   <div class="faq">
-    <details open><summary>Do you sell retail or wholesale?</summary><p>Skypex supplies wholesale bulk. Retail packs of our brands are available at supermarkets. If you are not sure which one you need, message us and tell us what you bake. [CONFIRM: minimum order quantities]</p></details>
-    <details><summary>I am a home baker. Where do I buy?</summary><p>Look for the retail packs at your favourite supermarket. If you cannot find a pack, send us a WhatsApp message and we will help you find it.</p></details>
-    <details><summary>Where is your shop and when are you open?</summary><p>G16, Spectrum Business Park, Baba Dogo Road, Nairobi. Monday to Friday 8:00 to 5:00, Saturday 8:00 to 1:00. Closed Sundays and public holidays.</p></details>
-    <details><summary>Do you deliver?</summary><p>[CONFIRM: delivery areas, fees and lead time. Bakers ask this first, so answer it plainly.]</p></details>
-    <details><summary>How do I get prices?</summary><p>Send us a WhatsApp message or tap "WhatsApp quote". Prices change with stock and quantity, so we confirm them when you order.</p></details>
-    <details><summary>How do I pay?</summary><p>[CONFIRM: M-Pesa, bank transfer, cash, credit terms for regular buyers.]</p></details>
-  </div>
-</div></section>
-
-<section style="padding-top:0"><div class="wrap">
-  <div class="final">
-    <div>
-      <h2>Tell us what you bake. We will sort the list.</h2>
-      <p>Message us on WhatsApp, call the counter, or walk in. A real person at Skypex replies during opening hours.</p>
-      <p class="contact" style="margin-top:18px">WhatsApp +254 722 386 394<br>Phone +254 735 610 504<br>sales@skypex.co.ke</p>
-    </div>
-    <div class="stack">
-      <a class="btn btn-orange" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">Get a wholesale quote</a>
-      <a class="btn btn-line" href="https://maps.google.com/?cid=2813447915882766585" target="_blank" rel="noopener">Find the store on Maps</a>
-      <a class="btn btn-line" href="https://g.page/r/CflgQST5XwsnEAI/review" target="_blank" rel="noopener">Review us on Google</a>
-    </div>
+    <details open><summary>Does Skypex sell wholesale or retail baking supplies?</summary><p>Skypex Supplies supplies wholesale bulk baking ingredients and packaging. Retail packs of our brands are available at supermarkets. [CONFIRM: minimum order quantities]</p></details>
+    <details><summary>Where can a home baker in Kenya buy Skypex brands?</summary><p>Look for retail packs at your favourite supermarket. If a pack is hard to find, message us on WhatsApp and we will help.</p></details>
+    <details><summary>Where is the Skypex shop and when is it open?</summary><p>G16, Spectrum Business Park, Baba Dogo Road, Nairobi. Monday to Friday 8:00 to 5:00, Saturday 8:00 to 1:00. Closed Sundays and public holidays.</p></details>
+    <details><summary>How do I get wholesale prices?</summary><p>Send a WhatsApp message to +254 722 386 394 or use the order builder above. Prices depend on stock and quantity, so we confirm them with each order.</p></details>
+    <details><summary>Which products does Skypex supply to bakeries?</summary><p>Cake mixes, sugar paste, whipping and cooking cream, fruit fillings, mirror glaze, sprinkles, cocoa and chocolate, sauces and spreads, bread mixes, instant yeast and baking packaging.</p></details>
+    <details><summary>Do you deliver, and how do I pay?</summary><p>[CONFIRM: delivery areas, fees, lead time, and accepted payment methods such as M-Pesa or bank transfer]</p></details>
   </div>
 </div></section>
 </main>
@@ -778,20 +580,19 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
   <div class="fcta">
     <h2>Ready to restock? Tell us what you bake.</h2>
     <div class="row">
-      <a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg> Order on WhatsApp</a>
+      <a class="btn btn-wa" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20would%20like%20a%20wholesale%20quote." target="_blank" rel="noopener">Order on WhatsApp</a>
       <a class="btn btn-line" style="color:#fff" href="https://maps.google.com/?cid=2813447915882766585" target="_blank" rel="noopener">Get directions</a>
     </div>
   </div>
   <div class="fgrid">
     <div class="fbrand">
       <a class="logo" href="#top" aria-label="Skypex Supplies Ltd"><svg width="44" height="40" viewBox="0 0 44 40" aria-hidden="true"><path d="M8 28c-4-1-6-5-4-9 1.5-3 4.5-4 7-3.4C12 11 17 8 22 8c6 0 10 3.5 11 8 4-.5 8 2.4 7.2 6.6-.6 3-3 5-6 5.4V35H12v-7H8Z" fill="#1499D4"/><path d="M13 30h19M16 24h13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg><span><b>Skypex Supplies</b><small>Bakery success starts with us</small></span></a>
-      <p>Wholesale baking ingredients and packaging for Nairobi's bakeries, cafés and hotels. Packed and distributed by Skypex Supplies Limited since 2009.</p>
+      <p>Wholesale baking ingredients and packaging for bakeries, cafés and hotels in Nairobi and across Kenya.</p>
       <div class="fsoc">
         <a href="https://www.instagram.com/skypexsuppliesltd/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
         <a href="https://www.facebook.com/SkypexSuppliesLtd/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.6V13h2.8v8h3.1Z"/></svg></a>
         <a href="https://www.tiktok.com/@skypexsuppliesltd" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.3 2.3 1.7 3.8 3.9 4v3a7 7 0 0 1-3.8-1.2v6.2a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v3.1a2.5 2.5 0 1 0 1.6 2.3V3h2.9Z"/></svg></a>
         <a href="https://www.youtube.com/@SkypexSuppliesLtd" target="_blank" rel="noopener" aria-label="YouTube"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5 3-5 3Z"/></svg></a>
-        <a href="https://g.page/r/CflgQST5XwsnEAI/review" target="_blank" rel="noopener" aria-label="Review us on Google"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 10H12v4h5.6c-.5 2.5-2.6 4-5.6 4a6 6 0 1 1 3.9-10.5l2.9-2.8A10 10 0 1 0 22 12c0-.7-.1-1.4-.2-2Z"/></svg></a>
       </div>
     </div>
     <div>
@@ -802,12 +603,9 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
         <li><a href="https://www.skypex.co.ke/skybake/">Skybake</a></li>
         <li><a href="https://www.skypex.co.ke/pristine-whipping-cream/">Pristine cream</a></li>
         <li><a href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods</a></li>
-        <li><a href="https://www.skypex.co.ke/barry-callebaut/">Barry Callebaut</a></li>
-        <li><a href="https://www.skypex.co.ke/altinmarka-cocoa/">Altinmarka cocoa</a></li>
         <li><a href="https://www.skypex.co.ke/komplet/">Komplet bread mixes</a></li>
-        <li><a href="https://www.skypex.co.ke/hotpack/">Hotpack</a></li>
-        <li><a href="https://www.skypex.co.ke/nova-cart/">Nova Cart</a></li>
-        <li><a href="https://www.skypex.co.ke/iffco/">IFFCO</a></li>
+        <li><a href="https://www.skypex.co.ke/hotpack/">Hotpack packaging</a></li>
+        <li><a href="https://www.skypex.co.ke/wholesale-bakery-essentials/">Wholesale essentials</a></li>
       </ul>
     </div>
     <div>
@@ -815,10 +613,8 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
       <ul>
         <li><a href="https://www.skypex.co.ke/about-us/">About us</a></li>
         <li><a href="https://www.skypex.co.ke/sky-bake-kitchen/">Skybake Kitchen</a></li>
-        <li><a href="https://www.skypex.co.ke/wholesale-bakery-essentials/">Wholesale essentials</a></li>
-        <li><a href="https://www.skypex.co.ke/blog/">Baker's guides</a></li>
+        <li><a href="https://www.skypex.co.ke/blog/">Baking guides</a></li>
         <li><a href="#reviews">Google reviews</a></li>
-        <li><a href="#instagram">Instagram</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="https://www.skypex.co.ke/contact-us/">Contact us</a></li>
         <li><a href="https://www.skypex.co.ke/sitemap/">Sitemap</a></li>
@@ -827,17 +623,16 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
     <div>
       <h3>Visit or call</h3>
       <ul class="fcontact">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Godown 16B (G16), Spectrum Business Park,<br>Baba Dogo Road, Ruaraka, Nairobi</span></li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span><a href="tel:+254735610504">0735 610 504</a><br><a href="tel:+254734077575">0734 077 575</a> · <a href="tel:+254700508868">0700 508 868</a><br><a href="tel:+254202680819">020 268 0819</a></span></li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-1.9.9-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg><span>WhatsApp <a href="https://wa.me/254722386394" target="_blank" rel="noopener">0722 386 394</a></span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Godown 16B (G16), Spectrum Business Park, Baba Dogo Road, Ruaraka, Nairobi</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span><a href="tel:+254735610504">0735 610 504</a>, <a href="tel:+254734077575">0734 077 575</a><br><a href="tel:+254700508868">0700 508 868</a>, <a href="tel:+254202680819">020 268 0819</a></span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg><span>WhatsApp <a href="https://wa.me/254722386394" target="_blank" rel="noopener">0722 386 394</a></span></li>
         <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><a href="mailto:sales@skypex.co.ke">sales@skypex.co.ke</a><br><a href="mailto:info@skypex.co.ke">info@skypex.co.ke</a></span></li>
       </ul>
-      <div class="fhours"><b><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Opening hours</b>Mon to Fri 8:00 to 5:00<br>Sat 8:00 to 1:00<br>Sunday and public holidays closed</div>
+      <div class="fhours"><b>Opening hours</b>Mon to Fri 8:00 to 5:00<br>Sat 8:00 to 1:00<br>Sunday and public holidays closed</div>
     </div>
   </div>
   <div class="fbar">
     <span>© 2026 Skypex Supplies Ltd. All rights reserved.</span>
-    <span>Wholesale bulk supply. Retail packs at your favourite supermarkets.</span>
     <a class="totop" href="#top">Back to top ↑</a>
   </div>
 </div>
@@ -854,36 +649,24 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
   function wa(t){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(t);}
   var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* duplicate ribbon for seamless loop */
   var tr=document.getElementById("track"); tr.innerHTML=tr.innerHTML+tr.innerHTML;
-
-  /* hero confetti */
-  var cf=document.getElementById("confetti"),cols=["#fff","#F39C2B","#35B5EA","#FFD79A","#FF8FA3","#9BE15D"];
-  if(!reduce){for(var i=0;i<26;i++){var e=document.createElement("i");e.style.left=(Math.random()*100)+"%";e.style.background=cols[i%cols.length];e.style.animationDuration=(9+Math.random()*10)+"s";e.style.animationDelay=(-Math.random()*14)+"s";e.style.transform="rotate("+(Math.random()*180)+"deg)";cf.appendChild(e);}}
 
   /* carousel */
   var hero=document.getElementById("hero"),slides=[].slice.call(hero.querySelectorAll(".slide")),dots=document.getElementById("dots"),cur=0,timer;
-  slides.forEach(function(s,k){var b=document.createElement("button");b.className="dot"+(k?"":" on");b.setAttribute("aria-label","Go to slide "+(k+1));b.innerHTML="<i></i>";b.onclick=function(){go(k,true)};dots.appendChild(b);});
-  function go(n,manual){
+  slides.forEach(function(s,k){var b=document.createElement("button");b.className="dot"+(k?"":" on");b.setAttribute("aria-label","Go to slide "+(k+1));b.innerHTML="<i></i>";b.onclick=function(){go(k)};dots.appendChild(b);});
+  function go(n){
     cur=(n+slides.length)%slides.length;
-    slides.forEach(function(s,k){s.classList.toggle("on",k===cur)});
+    slides.forEach(function(s,k){s.classList.toggle("on",k===cur);var im=s.querySelector("img.banner");if(im&&k===cur)im.loading="eager"});
     [].forEach.call(dots.children,function(d,k){d.classList.remove("on");void d.offsetWidth;d.classList.toggle("on",k===cur)});
     clearTimeout(timer); if(!reduce) timer=setTimeout(function(){go(cur+1)},6500);
   }
-  document.getElementById("prev").onclick=function(){go(cur-1,true)};
-  document.getElementById("next").onclick=function(){go(cur+1,true)};
+  document.getElementById("prev").onclick=function(){go(cur-1)};
+  document.getElementById("next").onclick=function(){go(cur+1)};
   hero.addEventListener("mouseenter",function(){hero.classList.add("paused");clearTimeout(timer)});
   hero.addEventListener("mouseleave",function(){hero.classList.remove("paused");go(cur)});
   go(0);
 
-  /* product reels */
-  var info={
-    pristine:{t:"Pristine",d:"Purely Pristine: the cream range we put at the centre of our shelf. Ask for the pack that fits your menu, from decorating cakes and desserts to cooking.",q:"Pristine Whipping Cream"},
-    frutti:{t:"Frutti fruit fillings",d:"Frutti fruit fillings from the Skybake and Frutti lines, in Mango, Blueberry, Strawberry and Raspberry. Ready to fill tarts, cheesecakes and cakes.",q:"Frutti fruit fillings"},
-    glaze:{t:"Skybake mirror glaze",d:"Caramel, Chocolate and Clear mirror glaze in tubs, for the glossy finish that makes a cake stand out in a display or a photo.",q:"Skybake mirror glaze"},
-    sprinkles:{t:"Skypower sprinkles",d:"Crispy chips and vermicelli in Skypower pouches. Decorate smarter with colour that does not need a recipe.",q:"Skypower sprinkles and vermicelli"},
-    yeast:{t:"Bruggeman instant yeast",d:"Bruggeman instant yeast in 500 g packs for bread, buns and doughnuts. A baker's staple, supplied in bulk.",q:"Bruggeman instant yeast"}
-  };
+  /* product videos */
   var vids=[].slice.call(document.querySelectorAll("#screen video")),tabs=[].slice.call(document.querySelectorAll(".tab"));
   function show(k){
     tabs.forEach(function(t){t.setAttribute("aria-selected",t.dataset.k===k)});
@@ -891,39 +674,31 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
       var on=v.dataset.k===k;v.classList.toggle("on",on);
       if(on){var s=v.querySelector("source");if(s&&s.dataset.src){s.src=s.dataset.src;delete s.dataset.src;v.load();}var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();
     });
-    var d=info[k];document.getElementById("rt").textContent=d.t;document.getElementById("rd").textContent=d.d;
-    document.getElementById("rq").href=wa("Hello Skypex, please send me a wholesale quote for "+d.q+".");
   }
-  tabs.forEach(function(t){t.onclick=function(){show(t.dataset.k)}});
+  tabs.forEach(function(t){t.onclick=function(){show(t.dataset.k)};t.onkeydown=function(e){if(e.target===t&&(e.key==='Enter'||e.key===' ')){e.preventDefault();show(t.dataset.k)}}});
   show("pristine");
 
-  /* count up (final value is already in the markup) */
-  if(!reduce&&"IntersectionObserver" in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){
-      if(!en.isIntersecting)return;io.unobserve(en.target);
-      var el=en.target,to=+el.dataset.to,suf=el.dataset.suffix||"",t0=performance.now();
-      (function step(t){var p=Math.min(1,(t-t0)/1200);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+(p===1?suf:"");if(p<1)requestAnimationFrame(step)})(t0);
-    })},{threshold:.5});
-    [].forEach.call(document.querySelectorAll("[data-to]"),function(n){io.observe(n)});
-  }
-
-  /* tilt on hover for photo cards */
-  [].forEach.call(document.querySelectorAll(".photo .card"),function(c){
-    c.addEventListener("mousemove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.animation="none";c.style.transform="perspective(700px) rotateY("+(x*10)+"deg) rotateX("+(-y*8)+"deg)"});
-    c.addEventListener("mouseleave",function(){c.style.transform="";c.style.animation=""});
-  });
-
-  /* autoplay videos in view (chocolate reel etc.) */
+  /* autoplay chocolate video in view */
   [].forEach.call(document.querySelectorAll("video.autov"),function(v){
     v.addEventListener("loadeddata",function(){v.classList.add("ok")});
     if("IntersectionObserver" in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.35}).observe(v)}
   });
 
+  /* count up */
+  if(!reduce&&"IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      if(!en.isIntersecting)return;io.unobserve(en.target);
+      var el=en.target,to=+el.dataset.to,suf=el.dataset.suffix||"",t0=performance.now();
+      (function step(t){var p=Math.min(1,(t-t0)/1100);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+(p===1?suf:"");if(p<1)requestAnimationFrame(step)})(t0);
+    })},{threshold:.5});
+    [].forEach.call(document.querySelectorAll("[data-to]"),function(n){io.observe(n)});
+  }
+
   /* range filter */
   var fb=[].slice.call(document.querySelectorAll("#fchips button")),pcs=[].slice.call(document.querySelectorAll("#pgrid .pc"));
   fb.forEach(function(b){b.onclick=function(){fb.forEach(function(x){x.setAttribute("aria-pressed",x===b)});pcs.forEach(function(c){c.hidden=!(b.dataset.f==="all"||c.dataset.cat===b.dataset.f)})}});
 
-  /* order builder + sheets */
+  /* order builder */
   var form=document.getElementById("build"),send=document.getElementById("send");
   function upd(){
     var who=document.getElementById("who-sel").value,
@@ -932,9 +707,5 @@ footer li a::before{content:"›";color:var(--sky);margin-right:8px;font-weight:
     send.href=wa("Hello Skypex, I am a "+who+(nm?" ("+nm+")":"")+".\nI need: "+(needs.length?needs.join(", "):"your price list")+".\nBuying pattern: "+qty+".\nPlease send stock and wholesale prices.");
   }
   form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault()});upd();
-  [].forEach.call(document.querySelectorAll("[data-list]"),function(a){
-    a.href=wa("Hello Skypex, I would like this order sheet: "+a.getAttribute("data-list")+". Please help me with quantities and wholesale prices.");
-    a.target="_blank";a.rel="noopener";
-  });
 })();
 </script>
