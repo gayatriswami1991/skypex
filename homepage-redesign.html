@@ -75,7 +75,8 @@ nav.links a:hover{color:var(--sky);background:var(--tint)}
 
 /* hero carousel (your banner images) */
 .hero{position:relative;overflow:hidden;background:#DCEBF6}
-.slides{position:relative}
+.slides{display:grid}
+.slides>.slide{grid-area:1/1;position:relative;inset:auto}
 .slide{padding:0;position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s;display:block;color:var(--navy)}
 .slide.on{opacity:1;visibility:visible;position:relative}
 .slide .banner{display:block;width:100%;height:auto}
@@ -382,20 +383,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
 .cc .ctx{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
 .cc .ccl{margin-top:auto;flex-wrap:wrap;gap:6px 14px}
 
-.slide.dark{background:linear-gradient(100deg,#2B170F 0%,#4a2616 55%,#7A4630 100%)}
-.slide.dark::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 30%,rgba(244,180,106,.35),transparent 45%),radial-gradient(circle at 92% 90%,rgba(255,255,255,.12),transparent 40%)}
-.slide.dark{aspect-ratio:1800/675}
-.slide.dark .banner{z-index:0}
-.slide.dark .tag{background:#fff}
-.slide.dark h2.t,.slide.dark p.sub{color:#fff}
-.slide.dark .btn-line{color:#fff}
-.slide.dark::after{display:none}
 
-.chocgrid{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:center;margin-top:30px}
-.chocleft .clist{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
-.chocleft .cc{padding:16px 18px}
-.cvideo{width:300px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:#1a0d08;box-shadow:0 24px 40px -24px #000;justify-self:end}
-.cvideo video{width:100%;height:100%;min-height:0;object-fit:cover;display:block}
 
 .pimg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;opacity:0;transition:opacity .4s}
 .pimg video.on{opacity:1}
@@ -434,25 +422,39 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
 .tl b{flex:1;font:900 14px/1.25 var(--display)}
 .tl i{font-style:normal;color:var(--sky-deep);font-weight:900}
 
+.chocgrid{display:grid;grid-template-columns:1fr minmax(320px,420px);gap:48px;align-items:center;margin-top:20px}
+.chocleft .h2{font-size:clamp(26px,3.2vw,38px)}
+.chocleft .lead{font-size:17px;margin-bottom:22px}
+.chocleft .clist{grid-template-columns:1fr 1fr;grid-auto-rows:1fr}
+.chocleft .cc{padding:16px 18px}
+.cvideo{width:100%;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:#1a0d08;box-shadow:0 30px 50px -26px #000}
+.cvideo video{width:100%;height:100%;object-fit:contain;display:block}
+
 @media (max-width:1100px){
-  .slide.dark{aspect-ratio:auto;min-height:440px}
-  .slide{min-height:440px}
-  .slide .banner{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% center}
-  .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.72) 50%,rgba(255,255,255,0) 85%)}
+  .slide{min-height:0}
+  .slide .banner{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:76% center}
+  .slide{aspect-ratio:auto;min-height:480px}
+  .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.7) 48%,rgba(255,255,255,0) 82%)}
   .slide .wrap{position:relative;z-index:2;display:flex;align-items:center;inset:auto;padding-block:36px 84px;padding-left:max(24px,4vw)}
-  .slide .copy{max-width:520px}
-  .slide h1,.slide h2.t{font-size:clamp(28px,5vw,40px)}.slide p.sub{font-size:16px}
+  .slide .copy{max-width:min(440px,50%)}
+  .slide h1,.slide h2.t{font-size:clamp(26px,4.2vw,38px)}.slide p.sub{font-size:15px}
   .ctl{bottom:18px}
 }
 @media (max-width:700px){
-  .slide{min-height:500px}
-  .slide::after{background:linear-gradient(180deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.82) 58%,rgba(255,255,255,.1) 100%)}
-  .slide .wrap{align-items:flex-start;padding-block:26px 84px;padding-left:max(16px,env(safe-area-inset-left,0px))}
-  .slide .banner{object-position:80% bottom}
+  .slide,.slide.on{display:block;min-height:0;background:var(--tint)}
+  .slide .banner,.slide .banner{position:static;display:block;width:100%;height:auto;aspect-ratio:1800/720;object-fit:cover;object-position:68% center}
+  .slide::after{display:none}
+  .slide .wrap{position:static;display:block;padding:20px max(16px,env(safe-area-inset-left,0px)) 6px}
+  .slide .copy{max-width:none}
+  .slide h1,.slide h2.t{font-size:28px;margin-block:12px 10px}
+  .slide p.sub{font-size:15.5px;margin-bottom:16px}
+  .slide .row .btn{flex:1 1 150px}
+  .ctl{position:static;padding-block:4px 18px;background:var(--tint)}
+  .hero{background:var(--tint)}
 }
 @media (max-width:980px){
   .cb{grid-template-columns:1fr}.cvv{justify-self:center;width:min(100%,320px)}
-  .chocgrid{grid-template-columns:1fr}.cvideo{justify-self:center;order:-1}
+  .chocgrid{grid-template-columns:1fr}.cvideo{max-width:420px;justify-self:center;order:-1}
   .trust,.igband{grid-template-columns:1fr}.rv4{grid-template-columns:1fr 1fr}
   nav.links{display:none}.mnav{display:block}header.nav .btn{margin-left:0}header.nav .wrap{position:relative}
   .grid4,.pgrid{grid-template-columns:1fr 1fr}.posts{grid-template-columns:1fr 1fr}
@@ -460,7 +462,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
   .steps,.stats{height:auto;grid-template-rows:none}
   section{padding-block:56px}
 }
-@media (max-width:600px){.crow{flex-wrap:wrap}.crow .btn{width:100%}.pgrid2{grid-template-columns:1fr 1fr}header.nav .wrap>.btn{display:none}.rv4{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.grid4,.posts,.clist,.fgrid{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr 1fr}.pbody p{display:none}.logo small{display:none}}
+@media (max-width:600px){.chocleft .clist{grid-template-columns:1fr}.crow{flex-wrap:wrap}.crow .btn{width:100%}.pgrid2{grid-template-columns:1fr 1fr}header.nav .wrap>.btn{display:none}.rv4{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.grid4,.posts,.clist,.fgrid{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr 1fr}.pbody p{display:none}.logo small{display:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.slide .anim{opacity:1!important;transform:none!important}}
 </style>
 
@@ -505,8 +507,8 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
         </div>
       </div></div>
     </section>
-    <section class="slide dark" aria-roledescription="slide" aria-label="3 of 3">
-      <img class="banner" src="assets/img/banner-chocolate.jpg" alt="Altinmarka cocoa powder and compound chocolate with melted chocolate for cake baking" width="1800" height="720" loading="lazy" onerror="this.remove()">
+    <section class="slide" aria-roledescription="slide" aria-label="3 of 3">
+      <img class="banner" src="assets/img/banner-chocolate.jpg" alt="Altinmarka cocoa powder and compound chocolate with melted chocolate for cake baking" width="1800" height="720" loading="lazy">
       <div class="wrap"><div class="copy">
         <span class="tag anim">Chocolate for cake baking</span>
         <h2 class="t anim d2">Chocolate and Cocoa for Cakes That Sell</h2>
@@ -634,22 +636,18 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
 
 <!-- CHOCOLATE -->
 <section class="choc" id="chocolate"><div class="wrap">
-  <span class="kicker">Chocolate, cocoa and sauces</span>
-  <h2 class="h2">Cocoa powder, couverture chocolate and dessert sauces in bulk</h2>
-  <p class="lead">Callebaut and Altinmarka for the serious chocolate work, Dawn white chocolate, and ready Dr.baker sauces and spreads for the pastry counter.</p>
+  <span class="kicker">Chocolate and cocoa</span>
   <div class="chocgrid">
     <div class="chocleft">
+      <h2 class="h2">Cocoa, Couverture and Dessert Sauces in Bulk</h2>
+      <p class="lead">Chocolate for ganache, glazes and cake baking.</p>
       <div class="clist">
-        <article class="cc"><div class="ctx"><b>Altinmarka alkalized cocoa</b><span>Cocoa powder, 10 to 12 percent fat, 25 kg sacks.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/altinmarka-cocoa/">Altinmarka →</a></div></div></article>
-        <article class="cc"><div class="ctx"><b>Barry Callebaut</b><span>Couverture for ganache, coating and moulding.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/barry-callebaut/">Barry Callebaut →</a></div></div></article>
-        <article class="cc"><div class="ctx"><b>Dawn Cabo Blanco</b><span>White chocolate in a bulk bag.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Cabo%20Blanco%20white%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods →</a></div></div></article>
-        <article class="cc"><div class="ctx"><b>Dawn chocolate chunks</b><span>Belgian chunks for cookies and cakes.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Belgian%20chocolate%20chunks." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods →</a></div></div></article>
-        <article class="cc"><div class="ctx"><b>Dr.baker sauces</b><span>Chocolate hazelnut, Oro and pistachio, 1.25 kg bottles.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20dessert%20sauces." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
-        <article class="cc"><div class="ctx"><b>Dr.baker spreads</b><span>Hazelnut praline and pistachio spread, bulk tubs.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20hazelnut%20praline%20and%20pistachio%20spread." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
+      <article class="cc"><div class="ctx"><b>Altinmarka cocoa</b><span>Alkalized cocoa powder, 25 kg sacks.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/altinmarka-cocoa/">Altinmarka →</a></div></div></article>
+      <article class="cc"><div class="ctx"><b>Barry Callebaut</b><span>Couverture chocolate for ganache and coating.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/barry-callebaut/">Barry Callebaut →</a></div></div></article>
+      <article class="cc"><div class="ctx"><b>Dawn white chocolate</b><span>Cabo Blanco and Belgian chocolate chunks.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Cabo%20Blanco%20white%20chocolate%20and%20Belgian%20chocolate%20chunks." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods →</a></div></div></article>
+      <article class="cc"><div class="ctx"><b>Dr.baker sauces and spreads</b><span>Chocolate hazelnut, Oro, pistachio and praline.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20dessert%20sauces%20and%20spreads." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
       </div>
-      <div class="cguides" aria-label="Chocolate pages and guides">
-        <a href="https://www.skypex.co.ke/barry-callebaut/">Barry Callebaut</a><a href="https://www.skypex.co.ke/callebaut/">Callebaut</a><a href="https://www.skypex.co.ke/couvertures/">Couvertures</a><a href="https://www.skypex.co.ke/compound-vs-couverture-chocolate/">Compound vs couverture</a><a href="https://www.skypex.co.ke/why-your-ganache-seizes-and-how-to-stop-it/">Why ganache seizes</a>
-      </div>
+      <div class="cguides"><a href="https://www.skypex.co.ke/compound-vs-couverture-chocolate/">Compound vs couverture</a><a href="https://www.skypex.co.ke/why-your-ganache-seizes-and-how-to-stop-it/">Why ganache seizes</a></div>
     </div>
     <div class="cvideo"><video id="chocvid" autoplay muted loop playsinline preload="auto" poster="assets/img/chocolate-poster.jpg" aria-label="Belgian chocolate excellence: discover Callebaut at Skypex"><source src="assets/video/chocolate.mp4" type="video/mp4"></video></div>
   </div>
