@@ -287,7 +287,7 @@ footer li a:hover{color:#fff;text-decoration:underline}
 .tcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:16px}
 .tcard h3{font-size:22px;font-weight:900}
 .partners{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1}
-.partners span.lg{background:#fff}.partners span.lg img{max-height:44px;width:auto;max-width:100%;display:block}
+.partners span.lg{background:#fff}.partners span.lg img{max-height:42px;width:auto;max-width:100%;display:block}
 .partners span{align-self:stretch;display:grid;place-items:center;text-align:center;border:1px solid var(--line);border-radius:12px;background:var(--tint);font:900 15px var(--display);padding:12px 8px;min-height:54px}
 .recs{display:grid;gap:12px;flex:1;grid-auto-rows:1fr}
 .rec{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--tint)}
@@ -382,7 +382,17 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
 .cc .ctx{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
 .cc .ccl{margin-top:auto;flex-wrap:wrap;gap:6px 14px}
 
+.slide.dark{background:linear-gradient(100deg,#2B170F 0%,#4a2616 55%,#7A4630 100%)}
+.slide.dark::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 30%,rgba(244,180,106,.35),transparent 45%),radial-gradient(circle at 92% 90%,rgba(255,255,255,.12),transparent 40%)}
+.slide.dark{aspect-ratio:1800/675}
+.slide.dark .banner{z-index:0}
+.slide.dark .tag{background:#fff}
+.slide.dark h2.t,.slide.dark p.sub{color:#fff}
+.slide.dark .btn-line{color:#fff}
+.slide.dark::after{display:none}
+
 @media (max-width:1100px){
+  .slide.dark{aspect-ratio:auto;min-height:440px}
   .slide{min-height:440px}
   .slide .banner{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% center}
   .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.72) 50%,rgba(255,255,255,0) 85%)}
@@ -427,7 +437,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
 <!-- HERO -->
 <div class="hero" id="hero" role="region" aria-roledescription="carousel" aria-label="Featured baking supplies">
   <div class="slides">
-    <section class="slide on" aria-roledescription="slide" aria-label="1 of 2">
+    <section class="slide on" aria-roledescription="slide" aria-label="1 of 3">
       <img class="banner" src="assets/img/banner-range.jpg" alt="Skybake Super Veg Vanilla Cake Mix, White Sugar Paste, Frutti strawberry fruit filling and Dr.baker chocolate hazelnut sauce, wholesale baking supplies in Nairobi" width="1800" height="675" fetchpriority="high">
       <div class="wrap"><div class="copy">
         <span class="tag anim">Nairobi, since 2009</span>
@@ -439,7 +449,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
         </div>
       </div></div>
     </section>
-    <section class="slide" aria-roledescription="slide" aria-label="2 of 2">
+    <section class="slide" aria-roledescription="slide" aria-label="2 of 3">
       <img class="banner" src="assets/img/banner-pristine.jpg" alt="Pristine whipping and cooking cream bag with whipped cream, strawberries and cream cakes" width="1800" height="720" loading="lazy">
       <div class="wrap"><div class="copy">
         <span class="tag anim">Our hero cream</span>
@@ -447,7 +457,18 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
         <p class="sub anim d3">Pristine whipping and cooking cream for decorating cakes, filling pastries and finishing desserts. Supplied in bulk to bakeries and hotels in Nairobi.</p>
         <div class="row anim d3">
           <a class="btn btn-orange" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20want%20a%20wholesale%20quote%20for%20Pristine%20Whipping%20Cream." target="_blank" rel="noopener">Get a Pristine quote</a>
-          <a class="btn btn-line" href="#reels">Watch the video</a>
+        </div>
+      </div></div>
+    </section>
+    <section class="slide dark" aria-roledescription="slide" aria-label="3 of 3">
+      <img class="banner" src="assets/img/banner-chocolate.jpg" alt="Altinmarka cocoa powder and compound chocolate with melted chocolate for cake baking" width="1800" height="720" loading="lazy" onerror="this.remove()">
+      <div class="wrap"><div class="copy">
+        <span class="tag anim">Chocolate for cake baking</span>
+        <h2 class="t anim d2">Chocolate and cocoa for cakes that sell</h2>
+        <p class="sub anim d3">Cocoa powder, compound and couverture chocolate for ganache, glazes and chocolate cakes, supplied in bulk to bakeries in Nairobi.</p>
+        <div class="row anim d3">
+          <a class="btn btn-orange" href="#chocolate">See chocolate</a>
+          <a class="btn btn-line" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20I%20want%20a%20wholesale%20quote%20for%20chocolate%20and%20cocoa." target="_blank" rel="noopener">Get a chocolate quote</a>
         </div>
       </div></div>
     </section>
@@ -508,10 +529,10 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
   <div class="two">
     <div class="cakeimg"><img src="assets/img/cakemix-banner.jpg" alt="Skybake Super Veg Vanilla Cake Mix, White Sugar Paste, Frutti strawberry filling and Dr.baker sauce" width="1040" height="675"></div>
     <div class="clist2">
-      <article class="crow"><span class="th"><img src="assets/img/cakemix.jpg" alt="Skybake Super Veg Vanilla Cake Mix" onerror="this.parentNode.remove()"></span><div><b>Skybake Super Veg Vanilla Cake Mix</b><span>Vanilla cake mix for a consistent crumb, batch after batch.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Super%20Veg%20Vanilla%20Cake%20Mix." target="_blank" rel="noopener">Get a quote</a></article>
-      <article class="crow"><span class="th"><img src="assets/img/cakemix25.jpg" alt="Skybake Vanilla All Purpose Cake Mix" onerror="this.parentNode.remove()"></span><div><b>Skybake Vanilla All Purpose Cake Mix</b><span>All purpose vanilla mix in 25 kg sacks for working bakeries.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Vanilla%20All%20Purpose%20Cake%20Mix%2025kg." target="_blank" rel="noopener">Get a quote</a></article>
-      <article class="crow"><span class="th"><img src="assets/img/sugarpaste.jpg" alt="Skybake White Sugar Paste" onerror="this.parentNode.remove()"></span><div><b>Skybake White Sugar Paste</b><span>1 kg tubs of white sugar paste for covering and modelling cakes.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20White%20Sugar%20Paste." target="_blank" rel="noopener">Get a quote</a></article>
-      <article class="crow"><span class="th"><img src="assets/img/coconut.jpg" alt="Skybake Desiccated Coconut" onerror="this.parentNode.remove()"></span><div><b>Skybake Desiccated Coconut</b><span>100 percent unsweetened desiccated coconut, 1 kg pouch.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Desiccated%20Coconut%201kg." target="_blank" rel="noopener">Get a quote</a></article>
+      <article class="crow"><div><b>Skybake Super Veg Vanilla Cake Mix</b><span>Vanilla cake mix for a consistent crumb, batch after batch.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Super%20Veg%20Vanilla%20Cake%20Mix." target="_blank" rel="noopener">Get a quote</a></article>
+      <article class="crow"><div><b>Skybake Vanilla All Purpose Cake Mix</b><span>All purpose vanilla mix in 25 kg sacks for working bakeries.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Vanilla%20All%20Purpose%20Cake%20Mix%2025kg." target="_blank" rel="noopener">Get a quote</a></article>
+      <article class="crow"><div><b>Skybake White Sugar Paste</b><span>1 kg tubs of white sugar paste for covering and modelling cakes.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20White%20Sugar%20Paste." target="_blank" rel="noopener">Get a quote</a></article>
+      <article class="crow"><div><b>Skybake Desiccated Coconut</b><span>100 percent unsweetened desiccated coconut, 1 kg pouch.</span></div><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Skybake%20Desiccated%20Coconut%201kg." target="_blank" rel="noopener">Get a quote</a></article>
       <div class="cl-links"><a class="btn btn-sky btn-sm" href="https://www.skypex.co.ke/skybake/">View all Skybake products →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/sky-bake-kitchen/">Skybake Kitchen →</a></div>
     </div>
   </div>
@@ -523,7 +544,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
   <h2 class="h2">Baking supplies by category</h2>
   <p class="lead">Cream, fillings, bread and packaging, each linked to its page on our site. Chocolate and cocoa have their own section below.</p>
   <div class="cat-block">
-    <div class="bh"><div><h3>Cream and toppings</h3><p>Whipping, cooking and topping creams for decorating, filling and cooking.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/pristine-whipping-cream/">Pristine page →</a></div></div>
+    <div class="bh"><div><h3>Cream and toppings</h3><p>Whipping, cooking and topping creams for decorating, filling and cooking.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/pristine-whipping-cream/">Pristine →</a></div></div>
     <div class="pgrid2">
     <article class="pc"><div class="pimg cover" data-slot="Pristine Whipping Cream"><img src="assets/img/pristine.jpg" alt="Pristine whipping cream packs" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Cream</span><h3>Pristine Whipping Cream</h3><p>Purely Pristine: whipping and cooking cream for decorating and desserts.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Pristine%20Whipping%20Cream." target="_blank" rel="noopener">Get a quote</a></div></article>
     <article class="pc"><div class="pimg " data-slot="Pristine Whip Topping"><img src="assets/img/whiptopping.jpg" alt="Pristine Classic whip topping 1 L carton" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Cream</span><h3>Pristine Whip Topping</h3><p>Pristine Classic regular whip topping in a 1 L carton for cakes and beverages.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Pristine%20Whip%20Topping." target="_blank" rel="noopener">Get a quote</a></div></article>
@@ -533,7 +554,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
     </div>
   </div>
   <div class="cat-block">
-    <div class="bh"><div><h3>Fillings, compounds and finishing</h3><p>Fruit fillings, flavour compounds, mirror glaze and sprinkles for the finishing touch.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods page →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/skybake/">Skybake page →</a></div></div>
+    <div class="bh"><div><h3>Fillings, compounds and finishing</h3><p>Fruit fillings, flavour compounds, mirror glaze and sprinkles for the finishing touch.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/skybake/">Skybake →</a></div></div>
     <div class="pgrid2">
     <article class="pc"><div class="pimg cover" data-slot="Frutti fruit fillings"><img src="assets/img/frutti.jpg" alt="Frutti fruit filling tins" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Fillings</span><h3>Frutti fruit fillings</h3><p>Mango, Blueberry, Strawberry and Raspberry fruit fillings for tarts and cakes.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Frutti%20fruit%20fillings." target="_blank" rel="noopener">Get a quote</a></div></article>
     <article class="pc"><div class="pimg " data-slot="Dawn Foods flavour compounds"><img src="assets/img/compounds.jpg" alt="Dawn Foods flavour compound jars stacked" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Compounds</span><h3>Dawn Foods flavour compounds</h3><p>Strawberry, blueberry, raspberry, lemon, orange and passion fruit compounds.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Foods%20flavour%20compounds." target="_blank" rel="noopener">Get a quote</a></div></article>
@@ -544,7 +565,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
     </div>
   </div>
   <div class="cat-block">
-    <div class="bh"><div><h3>Bread and yeast</h3><p>Bread mixes, improvers and instant yeast for bread, buns and doughnuts.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/komplet/">Komplet page →</a></div></div>
+    <div class="bh"><div><h3>Bread and yeast</h3><p>Bread mixes, improvers and instant yeast for bread, buns and doughnuts.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/komplet/">Komplet →</a></div></div>
     <div class="pgrid2">
     <article class="pc"><div class="pimg " data-slot="Komplet Crusty Rye 50"><img src="assets/img/komplet.jpg" alt="Komplet Crusty Rye 50 bread mix 10 kg sack" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Bread mix</span><h3>Komplet Crusty Rye 50</h3><p>Concentrated rye bread mix in 10 kg sacks from the Komplet range.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Komplet%20Crusty%20Rye%2050." target="_blank" rel="noopener">Get a quote</a></div></article>
     <article class="pc"><div class="pimg " data-slot="Victoria instant yeast"><img src="assets/img/victoria.jpg" alt="Victoria instant yeast 500 g pack" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Yeast</span><h3>Victoria instant yeast</h3><p>500 g packs of instant yeast for bread, buns and doughnuts.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Victoria%20instant%20yeast%20500g." target="_blank" rel="noopener">Get a quote</a></div></article>
@@ -553,7 +574,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
     </div>
   </div>
   <div class="cat-block">
-    <div class="bh"><div><h3>Packaging</h3><p>Moulds, cake boxes, cups and containers to bake, carry and sell.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/hotpack/">Hotpack page →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/nova-cart/">Nova Cart page →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/skypex-essentials-packaging/">Essentials and packaging →</a></div></div>
+    <div class="bh"><div><h3>Packaging</h3><p>Moulds, cake boxes, cups and containers to bake, carry and sell.</p></div><div class="bl"><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/hotpack/">Hotpack →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/nova-cart/">Nova Cart →</a><a class="btn btn-line btn-sm" href="https://www.skypex.co.ke/skypex-essentials-packaging/">Skypex Essentials →</a></div></div>
     <div class="pgrid2">
     <article class="pc"><div class="pimg " data-slot="Paper loaf baking moulds"><img src="assets/img/moulds.jpg" alt="Paper loaf baking moulds" width="600" height="450" onload="this.parentNode.classList.add('ld')" onerror="this.closest('.pc').remove()"></div><div class="pbody"><span class="cat">Packaging</span><h3>Paper loaf baking moulds</h3><p>Disposable paper moulds for loaves and tea cakes. Bake and sell in one tin.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20paper%20loaf%20baking%20moulds." target="_blank" rel="noopener">Get a quote</a></div></article>
     <article class="pc text"><div class="pimg"><span>Hotpack</span></div><div class="pbody"><span class="cat">Packaging</span><h3>Hotpack</h3><p>Cake boxes, cups, containers and greaseproof papers.</p><a class="btn btn-q btn-sm" href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Hotpack%20packaging." target="_blank" rel="noopener">Get a quote</a></div></article>
@@ -574,14 +595,14 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
     <div class="cvideo"><video id="chocvid" autoplay muted loop playsinline preload="auto" poster="assets/img/chocolate-poster.jpg" aria-label="Belgian chocolate excellence: discover Callebaut at Skypex"><source src="assets/video/chocolate.mp4" type="video/mp4"></video></div>
     <div style="display:flex;flex-direction:column">
       <div class="clist" style="flex:1">
-        <article class="cc"><span class="cth"><img src="assets/img/cocoa.jpg" alt="Altinmarka alkalized cocoa" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Altinmarka alkalized cocoa</b><span>Alkalized cocoa powder, 10 to 12 percent fat, in 25 kg sacks.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/altinmarka-cocoa/">View page →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/couverture.jpg" alt="Barry Callebaut couverture" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Barry Callebaut couverture</b><span>Couverture chocolate for ganache, coating and moulding.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/barry-callebaut/">View page →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/whitechoc.jpg" alt="Dawn Cabo Blanco white chocolate" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Dawn Cabo Blanco white chocolate</b><span>White chocolate in a bulk bag for coating and moulding.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Cabo%20Blanco%20white%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">View page →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/chunks.jpg" alt="Dawn Belgian chocolate chunks" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Dawn Belgian chocolate chunks</b><span>Chocolate chunks for cookies, muffins and cakes.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Belgian%20chocolate%20chunks." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">View page →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/choc-hazelnut-sauce.jpg" alt="Dr.baker Chocolate Hazelnut Sauce" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Dr.baker Chocolate Hazelnut Sauce</b><span>1.25 kg bottle for ice cream, waffles and desserts.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Chocolate%20Hazelnut%20Sauce%201.25kg." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/oro-sauce.jpg" alt="Dr.baker Oro Sauce" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Dr.baker Oro Sauce</b><span>Cookies and cream style sauce for sundaes and shakes.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Oro%20Sauce." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/pistachio-sauce.jpg" alt="Dr.baker Pistachio Sauce" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Dr.baker Pistachio Sauce</b><span>1.25 kg pistachio sauce for ice cream and desserts.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Pistachio%20Sauce%201.25kg." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
-        <article class="cc"><span class="cth"><img src="assets/img/hazelnut-praline.jpg" alt="Dr.baker Hazelnut Praline" onerror="this.parentNode.remove()"></span><div class="ctx"><b>Dr.baker Hazelnut Praline</b><span>Bulk bucket for fillings, layers and toppings.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Hazelnut%20Praline." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Altinmarka alkalized cocoa</b><span>Alkalized cocoa powder, 10 to 12 percent fat, in 25 kg sacks.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Altinmarka%20alkalized%20cocoa%20powder%2025kg." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/altinmarka-cocoa/">Altinmarka →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Barry Callebaut couverture</b><span>Couverture chocolate for ganache, coating and moulding.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Barry%20Callebaut%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/barry-callebaut/">Barry Callebaut →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Dawn Cabo Blanco white chocolate</b><span>White chocolate in a bulk bag for coating and moulding.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Cabo%20Blanco%20white%20chocolate." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Dawn Belgian chocolate chunks</b><span>Chocolate chunks for cookies, muffins and cakes.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dawn%20Belgian%20chocolate%20chunks." target="_blank" rel="noopener">Get a quote →</a><a href="https://www.skypex.co.ke/dawn-foods/">Dawn Foods →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Dr.baker Chocolate Hazelnut Sauce</b><span>1.25 kg bottle for ice cream, waffles and desserts.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Chocolate%20Hazelnut%20Sauce%201.25kg." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Dr.baker Oro Sauce</b><span>Cookies and cream style sauce for sundaes and shakes.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Oro%20Sauce." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Dr.baker Pistachio Sauce</b><span>1.25 kg pistachio sauce for ice cream and desserts.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Pistachio%20Sauce%201.25kg." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
+        <article class="cc"><div class="ctx"><b>Dr.baker Hazelnut Praline</b><span>Bulk bucket for fillings, layers and toppings.</span><div class="ccl"><a href="https://wa.me/254722386394?text=Hello%20Skypex%2C%20please%20send%20me%20a%20wholesale%20quote%20for%20Dr.baker%20Hazelnut%20Praline." target="_blank" rel="noopener">Get a quote →</a></div></div></article>
       </div>
       <div class="cguides" aria-label="Chocolate pages and guides">
         <a href="https://www.skypex.co.ke/barry-callebaut/">Barry Callebaut</a>
@@ -681,9 +702,7 @@ nav.links .ddm a{display:block;padding:9px 12px;text-transform:none;letter-spaci
   <div class="trust">
     <div class="tcard">
       <h3>Brand partners</h3>
-      <div class="partners">
-        <span>Pristine</span><span class="lg"><img src="assets/img/skybake-logo.png" alt="Skybake logo, bake with quality" width="190" height="95"></span><span class="lg"><img src="assets/img/skypower-logo.png" alt="Skypower bread improver logo" width="215" height="82"></span><span>Dr.baker</span><span>Frutti</span><span>Barry Callebaut</span><span>Altinmarka</span><span>Dawn Foods</span><span>Komplet</span><span>Bruggeman</span><span>Victoria</span><span>Hotpack</span><span>Nova Cart</span><span>IFFCO</span>
-      </div>
+      <div class="partners"><span>Pristine</span><span class="lg"><img src="assets/img/skybake-logo.png" alt="Skybake logo" height="44"></span><span class="lg"><img src="assets/img/skypower-logo.png" alt="Skypower logo" height="44"></span><span>Dr.baker</span><span>Frutti</span><span class="lg"><img src="assets/img/logo-callebaut.png" alt="Barry Callebaut Callebaut logo" height="44"></span><span>Altinmarka</span><span>Dawn Foods</span><span class="lg"><img src="assets/img/logo-komplet.png" alt="Komplet logo" height="44"></span><span>Bruggeman</span><span>Victoria</span><span class="lg"><img src="assets/img/logo-hotpack.png" alt="Hotpack logo" height="44"></span><span class="lg"><img src="assets/img/logo-novacart.png" alt="Nova Cart logo" height="44"></span><span class="lg"><img src="assets/img/logo-iffco.png" alt="IFFCO logo" height="44"></span></div>
       <p class="tnote">[ADD: official partner logos and any distributor letters from the old website]</p>
     </div>
     <div class="tcard">
